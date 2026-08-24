@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/story-1.webp') center/cover;
+            padding: 10rem 0 5rem; text-align: center; color: white;
+        }
+        .form-group { margin-bottom: 1.5rem; position: relative; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .form-control { width: 100%; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; }
+        .form-control:focus { outline: none; border-color: var(--primary-color); }
+        .form-group.error .form-control { border-color: #ef4444; }
+        .error-message { color: #ef4444; font-size: 0.85rem; margin-top: 0.3rem; display: block; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand"><img src="assets/images/logo.webp" alt="Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Crops.html">Crops</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="Login.html" class="btn btn-outline">Login</a>
+            <a href="Signup.html" class="btn btn-primary">Get Started</a>
+            <i class="fas fa-bars mobile-menu-btn"></i>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Let's Grow Your Agricultural Future Together</h1>
+        </div>
+    </div>
+
+    <section class="section-padding container">
+        <div class="grid-2">
+            <div>
+                <h2 style="margin-bottom:1rem;">Get in Touch</h2>
+                <p style="margin-bottom:2rem;">Have questions about our platform? Need agricultural consultation? We are here to help.</p>
+                <div style="margin-bottom:1.5rem;">
+                    <strong><i class="fas fa-map-marker-alt" style="color:var(--primary-color); width:20px;"></i> Address:</strong> 123 Farming Valley, Agri State 10020
+                </div>
+                <div style="margin-bottom:1.5rem;">
+                    <strong><i class="fas fa-envelope" style="color:var(--primary-color); width:20px;"></i> Email:</strong> support@agriculturefarm.com
+                </div>
+                <div style="margin-bottom:1.5rem;">
+                    <strong><i class="fas fa-phone" style="color:var(--primary-color); width:20px;"></i> Phone:</strong> +1 (555) 123-4567
+                </div>
+            </div>
+            
+            <div class="card">
+                <form id="contact-form">
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" required placeholder="+1 234 567 8900">
+                        </div>
+                        <div class="form-group">
+                            <label>Farm/Company Name</label>
+                            <input type="text" class="form-control" placeholder="Green Valley">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="4" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Extra 1: Global Offices -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Global Offices</h2>
+                <p>Find us anywhere in the world.</p>
+            </div>
+            <div class="grid-3 stagger-grid">
+                <div class="card text-center hover-lift">
+                    <i class="fas fa-building fa-2x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h4>North America HQ</h4>
+                    <p>Chicago, Illinois, USA</p>
+                </div>
+                <div class="card text-center hover-lift">
+                    <i class="fas fa-building fa-2x" style="color:var(--accent-color); margin-bottom:1rem;"></i>
+                    <h4>Europe Hub</h4>
+                    <p>Amsterdam, Netherlands</p>
+                </div>
+                <div class="card text-center hover-lift">
+                    <i class="fas fa-building fa-2x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h4>Asia Pacific</h4>
+                    <p>Sydney, Australia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Extra 2: Support Channels -->
+    <section class="section-padding animate-section text-center">
+        <div class="container">
+            <h2 style="margin-bottom:3rem;">Ways to Get Help</h2>
+            <div class="grid-3 stagger-grid">
+                <div class="card hover-lift">
+                    <i class="fas fa-comments fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Live Chat</h3>
+                    <p>Instant support from our agents.</p>
+                    <button class="btn btn-outline" style="margin-top:1rem;">Start Chat</button>
+                </div>
+                <div class="card hover-lift">
+                    <i class="fas fa-envelope-open-text fa-3x" style="color:var(--accent-color); margin-bottom:1rem;"></i>
+                    <h3>Support Ticket</h3>
+                    <p>For complex technical issues.</p>
+                    <button class="btn btn-outline" style="margin-top:1rem;">Open Ticket</button>
+                </div>
+                <div class="card hover-lift">
+                    <i class="fas fa-headset fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly to an expert.</p>
+                    <button class="btn btn-outline" style="margin-top:1rem;">Call Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Extra 3: SLAs -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container grid-2" style="align-items:center;">
+            <div>
+                <h2>Our Response Commitment</h2>
+                <p>We know farming can't wait. We pledge to resolve your queries fast.</p>
+                <ul style="margin-top:1rem; font-weight:bold; font-size:1.2rem; line-height:2;">
+                    <li><i class="fas fa-stopwatch text-light"></i> Chat: <span style="color:var(--primary-color);">Under 2 mins</span></li>
+                    <li><i class="fas fa-stopwatch text-light"></i> Phone: <span style="color:var(--primary-color);">Under 5 mins</span></li>
+                    <li><i class="fas fa-stopwatch text-light"></i> Email: <span style="color:var(--primary-color);">Within 12 hours</span></li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-tachometer-alt" style="font-size:12rem; color:var(--accent-color);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Extra 4: PR & Media -->
+    <section class="section-padding animate-section text-center">
+        <div class="container">
+            <h2>Media & Press Inquiries</h2>
+            <p style="margin-bottom:2rem;">Are you a journalist or media professional?</p>
+            <div class="card hover-lift" style="display:inline-block; padding:2rem 4rem;">
+                <i class="fas fa-newspaper fa-2x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                <h4>Email our PR Team</h4>
+                <p style="color:var(--primary-color); font-weight:bold; font-size:1.2rem;">press@agriculturefarm.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Extra 5: Social Community -->
+    <section class="section-padding text-center animate-section" style="background:var(--primary-color); color:white;">
+        <div class="container">
+            <h2 style="color:white;">Join Our Social Community</h2>
+            <p style="color:rgba(255,255,255,0.8); margin-bottom:2rem;">Connect with 50,000+ farmers worldwide.</p>
+            <div style="display:flex; justify-content:center; gap:2rem;">
+                <i class="fab fa-facebook fa-3x hover-lift" style="cursor:pointer;"></i>
+                <i class="fab fa-twitter fa-3x hover-lift" style="cursor:pointer;"></i>
+                <i class="fab fa-instagram fa-3x hover-lift" style="cursor:pointer;"></i>
+                <i class="fab fa-youtube fa-3x hover-lift" style="cursor:pointer;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
+                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Crops.html">Crops</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

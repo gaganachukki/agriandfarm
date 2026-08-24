@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/crop-vegetative.webp') center/cover;
+            padding: 10rem 0 5rem;
+            text-align: center;
+            color: white;
+        }
+        .filter-bar {
+            display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;
+        }
+        .filter-btn {
+            background: transparent; border: 1px solid var(--primary-color);
+            padding: 0.5rem 1.5rem; border-radius: 20px; cursor: pointer; font-weight: 500;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color); color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand"><img src="assets/images/logo.webp" alt="Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Crops.html" class="active">Crops</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="Login.html" class="btn btn-outline">Login</a>
+            <a href="Signup.html" class="btn btn-primary">Get Started</a>
+            <i class="fas fa-bars mobile-menu-btn"></i>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Discover Crops.</h1>
+            <p style="font-size:1.2rem;">Understand Growth. Farm With Confidence.</p>
+        </div>
+    </div>
+
+    <section class="section-padding container">
+        <div class="filter-bar">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Kharif</button>
+            <button class="filter-btn">Rabi</button>
+            <button class="filter-btn">Cereals</button>
+            <button class="filter-btn">Vegetables</button>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <img src="assets/images/crop-seed.webp" alt="Wheat" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <h3>Wheat</h3>
+                <p>Season: Rabi</p>
+                <p>Duration: 120 Days</p>
+                <a href="404.html" class="btn btn-outline" style="margin-top:1rem; width:100%;">Learn More</a>
+            </div>
+            <div class="card">
+                <img src="assets/images/crop-germination.webp" alt="Corn" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <h3>Corn</h3>
+                <p>Season: Kharif</p>
+                <p>Duration: 90 Days</p>
+                <a href="404.html" class="btn btn-outline" style="margin-top:1rem; width:100%;">Learn More</a>
+            </div>
+            <div class="card">
+                <img src="assets/images/crop-harvest.webp" alt="Rice" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <h3>Rice</h3>
+                <p>Season: Kharif</p>
+                <p>Duration: 150 Days</p>
+                <a href="404.html" class="btn btn-outline" style="margin-top:1rem; width:100%;">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Crops Extra 1: Seasonal Calendar -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visual Crop Calendar</h2>
+                <p>Optimal planting months across regions.</p>
+            </div>
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; border-bottom:2px solid var(--primary-color); padding-bottom:1rem;">
+                    <strong>Crop</strong>
+                    <strong>Planting Window</strong>
+                    <strong>Harvest Window</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:1rem 0; border-bottom:1px solid #eee;" class="hover-lift">
+                    <span>Wheat</span>
+                    <span style="background:var(--accent-color); padding:0.2rem 1rem; border-radius:10px;">Oct - Dec</span>
+                    <span>Mar - May</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:1rem 0; border-bottom:1px solid #eee;" class="hover-lift">
+                    <span>Rice</span>
+                    <span style="background:var(--accent-color); padding:0.2rem 1rem; border-radius:10px;">Jun - Jul</span>
+                    <span>Nov - Dec</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:1rem 0;" class="hover-lift">
+                    <span>Maize</span>
+                    <span style="background:var(--accent-color); padding:0.2rem 1rem; border-radius:10px;">Feb - Mar</span>
+                    <span>Aug - Sep</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Extra 2: Organic vs Conventional -->
+    <section class="section-padding animate-section">
+        <div class="container grid-2">
+            <div class="card text-center" style="border: 2px solid var(--primary-color);">
+                <h3>Organic Farming</h3>
+                <i class="fas fa-leaf fa-3x" style="color:var(--primary-color); margin:1rem 0;"></i>
+                <p>No synthetic chemicals.</p>
+                <p>Higher market value.</p>
+                <p>Improves soil biodiversity.</p>
+            </div>
+            <div class="card text-center">
+                <h3>Conventional Farming</h3>
+                <i class="fas fa-vial fa-3x" style="color:gray; margin:1rem 0;"></i>
+                <p>Chemical fertilizers used.</p>
+                <p>Higher immediate yield.</p>
+                <p>Lower market price point.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Extra 3: Yield Calculator -->
+    <section class="section-padding bg-light animate-section text-center">
+        <div class="container">
+            <h2>Crop Yield Estimator</h2>
+            <p style="margin-bottom:2rem;">Calculate potential earnings based on area and crop type.</p>
+            <div class="card" style="max-width:600px; margin:0 auto; text-align:left;">
+                <div style="margin-bottom:1rem;">
+                    <label>Land Size (Acres)</label>
+                    <input type="number" value="10" style="width:100%; padding:0.8rem; margin-top:0.5rem; border:1px solid #ccc; border-radius:5px;">
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <label>Crop Type</label>
+                    <select style="width:100%; padding:0.8rem; margin-top:0.5rem; border:1px solid #ccc; border-radius:5px;">
+                        <option>Wheat</option>
+                        <option>Rice</option>
+                        <option>Corn</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" style="width:100%;">Calculate Estimated Yield</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Extra 4: Export Stats -->
+    <section class="section-padding animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Exported Crops</h2>
+                <p>Global demand statistics for 2026.</p>
+            </div>
+            <div style="max-width:800px; margin:0 auto;">
+                <div style="margin-bottom:1.5rem;" class="hover-lift">
+                    <div style="display:flex; justify-content:space-between;"><span>Soybeans</span><span>35%</span></div>
+                    <div style="background:#eee; height:15px; border-radius:10px;"><div style="width:35%; height:100%; background:var(--primary-color); border-radius:10px;"></div></div>
+                </div>
+                <div style="margin-bottom:1.5rem;" class="hover-lift">
+                    <div style="display:flex; justify-content:space-between;"><span>Wheat</span><span>28%</span></div>
+                    <div style="background:#eee; height:15px; border-radius:10px;"><div style="width:28%; height:100%; background:var(--accent-color); border-radius:10px;"></div></div>
+                </div>
+                <div class="hover-lift">
+                    <div style="display:flex; justify-content:space-between;"><span>Corn</span><span>20%</span></div>
+                    <div style="background:#eee; height:15px; border-radius:10px;"><div style="width:20%; height:100%; background:var(--primary-color); border-radius:10px;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Extra 5: Success Story -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container text-center">
+            <i class="fas fa-quote-left fa-3x" style="color:var(--accent-color); margin-bottom:1rem;"></i>
+            <h2 style="max-width:800px; margin:0 auto; line-height:1.4;">"Switching to climate-resilient crop varieties recommended by this platform saved our harvest during the drought."</h2>
+            <p style="margin-top:2rem; font-weight:bold;">- The Peterson Family Farm</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
+                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Crops.html">Crops</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

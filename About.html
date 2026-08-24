@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/farm-management.webp') center/cover;
+            padding: 10rem 0 5rem;
+            text-align: center;
+            color: white;
+        }
+        .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+        .feature-row.reverse { direction: rtl; }
+        .feature-row.reverse > * { direction: ltr; }
+        @media(max-width: 768px) { .feature-row { grid-template-columns: 1fr; gap: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand"><img src="assets/images/logo.webp" alt="Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Crops.html">Crops</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="Login.html" class="btn btn-outline">Login</a>
+            <a href="Signup.html" class="btn btn-primary">Get Started</a>
+            <i class="fas fa-bars mobile-menu-btn"></i>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>About Us.</h1>
+            <p style="font-size:1.2rem;">Our mission in the Agriculture & Farm industry.</p>
+        </div>
+    </div>
+
+    <section class="section-padding container">
+        <div class="feature-row">
+            <div>
+                <h2>1. Farm Management</h2>
+                <p>Map your fields, organize your equipment, and manage daily tasks across your entire farm from a single dashboard.</p>
+            </div>
+            <div>
+                <img src="assets/images/farm-management.webp" alt="Farm Management" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
+            </div>
+        </div>
+        
+        <div class="feature-row reverse">
+            <div>
+                <h2>2. Crop Management</h2>
+                <p>Track planting dates, monitor growth stages, and predict harvest times with our intelligent crop timelines.</p>
+            </div>
+            <div>
+                <img src="assets/images/crop-flowering.webp" alt="Crop Management" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div>
+                <h2>3. Soil & Water Management</h2>
+                <p>Ensure your soil is healthy and your crops are hydrated using our smart irrigation and soil monitoring tools.</p>
+            </div>
+            <div>
+                <img src="assets/images/soil-monitoring.webp" alt="Soil" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- About Extra 1: Our Timeline -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>How we grew from a small idea to a global platform.</p>
+            </div>
+            <div style="border-left: 4px solid var(--primary-color); padding-left: 2rem; margin-left: 2rem;">
+                <div style="margin-bottom:2rem; position:relative;" class="hover-lift">
+                    <i class="fas fa-circle" style="position:absolute; left:-2.6rem; top:0; color:var(--primary-color);"></i>
+                    <h4 style="color:var(--primary-color);">2018</h4>
+                    <h3>The Seed is Planted</h3>
+                    <p>Started as a small local farm management tool for a community of 50 farmers.</p>
+                </div>
+                <div style="margin-bottom:2rem; position:relative;" class="hover-lift">
+                    <i class="fas fa-circle" style="position:absolute; left:-2.6rem; top:0; color:var(--primary-color);"></i>
+                    <h4 style="color:var(--primary-color);">2022</h4>
+                    <h3>Sprouting Up</h3>
+                    <p>Expanded nationwide and integrated AI-driven crop advisory.</p>
+                </div>
+                <div style="position:relative;" class="hover-lift">
+                    <i class="fas fa-circle" style="position:absolute; left:-2.6rem; top:0; color:var(--primary-color);"></i>
+                    <h4 style="color:var(--primary-color);">2026</h4>
+                    <h3>Global Harvest</h3>
+                    <p>Now serving over 12,000 farmers globally with full end-to-end management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Extra 2: Core Values -->
+    <section class="section-padding animate-section">
+        <div class="container text-center">
+            <h2>Our Core Values</h2>
+            <div class="grid-4 stagger-grid" style="margin-top:3rem;">
+                <div>
+                    <i class="fas fa-leaf fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h4>Sustainability</h4>
+                    <p>Protecting the earth for future generations.</p>
+                </div>
+                <div>
+                    <i class="fas fa-handshake fa-3x" style="color:var(--accent-color); margin-bottom:1rem;"></i>
+                    <h4>Community</h4>
+                    <p>Farmers helping farmers succeed.</p>
+                </div>
+                <div>
+                    <i class="fas fa-lightbulb fa-3x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h4>Innovation</h4>
+                    <p>Leveraging tech for better yields.</p>
+                </div>
+                <div>
+                    <i class="fas fa-shield-alt fa-3x" style="color:var(--accent-color); margin-bottom:1rem;"></i>
+                    <h4>Integrity</h4>
+                    <p>Honest data, honest practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Extra 3: Leadership -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet The Team</h2>
+                <p>The experts behind the platform.</p>
+            </div>
+            <div class="grid-3 stagger-grid">
+                <div class="card text-center hover-lift">
+                    <div style="width:100px; height:100px; background:var(--primary-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user"></i></div>
+                    <h3>Robert Farm</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="card text-center hover-lift">
+                    <div style="width:100px; height:100px; background:var(--accent-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user-tie"></i></div>
+                    <h3>Jane Doe</h3>
+                    <p>Head of Agronomy</p>
+                </div>
+                <div class="card text-center hover-lift">
+                    <div style="width:100px; height:100px; background:var(--primary-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user-cog"></i></div>
+                    <h3>Alan Tech</h3>
+                    <p>Chief Technology Officer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Extra 4: Sustainability -->
+    <section class="section-padding animate-section">
+        <div class="container grid-2" style="align-items:center;">
+            <div>
+                <i class="fas fa-globe-americas" style="font-size:12rem; color:var(--accent-color); animation: spin 20s linear infinite;"></i>
+            </div>
+            <div>
+                <h2>Commitment to Zero Carbon</h2>
+                <p>We are actively working to reduce the carbon footprint of agriculture by optimizing logistics, reducing chemical runoff, and promoting regenerative farming practices.</p>
+                <button class="btn btn-primary" style="margin-top:1rem;">Read Our Green Report</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Extra 5: Awards -->
+    <section class="section-padding bg-light animate-section text-center">
+        <div class="container">
+            <h2>Awards & Recognition</h2>
+            <div class="grid-3 stagger-grid" style="margin-top:3rem;">
+                <div class="hover-lift">
+                    <i class="fas fa-trophy fa-2x" style="color:gold;"></i>
+                    <h4 style="margin-top:1rem;">Best AgriTech App 2025</h4>
+                </div>
+                <div class="hover-lift">
+                    <i class="fas fa-medal fa-2x" style="color:silver;"></i>
+                    <h4 style="margin-top:1rem;">Top 10 Innovators</h4>
+                </div>
+                <div class="hover-lift">
+                    <i class="fas fa-award fa-2x" style="color:bronze;"></i>
+                    <h4 style="margin-top:1rem;">Green Planet Award</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
+                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Crops.html">Crops</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

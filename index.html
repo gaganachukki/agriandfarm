@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture & Farm Management Platform</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <style>
+        /* Homepage specific styles */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg {
+            position: absolute;
+            top: -10%; left: 0; width: 100%; height: 120%;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/hero-bg.webp') center/cover;
+            z-index: -1;
+        }
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-content h1 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        .hero-content p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .hero-visual {
+            position: relative;
+            height: 500px;
+        }
+        .floating-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .fc-1 { top: 10%; right: 10%; }
+        .fc-2 { bottom: 20%; left: 0; }
+        .fc-3 { bottom: 0; right: 20%; }
+        
+        .floating-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            background: var(--accent-color);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        /* Timeline Section */
+        .growth-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 3rem;
+        }
+        .growth-timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-color);
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 15%;
+        }
+        .timeline-item .icon-box {
+            width: 80px; height: 80px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+            border: 5px solid var(--secondary-color);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Stats Section */
+        .statistics-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+        .stat-box { text-align: center; }
+        .stat-box h3 { font-size: 3rem; color: var(--accent-color); }
+        .stat-box p { color: white; }
+
+        @media(max-width: 1024px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-visual { display: none; }
+            .growth-timeline { flex-direction: column; gap: 2rem; }
+            .growth-timeline::before {
+                top: 0; left: 40px; width: 4px; height: 100%;
+            }
+            .timeline-item { width: 100%; display: flex; align-items: center; gap: 2rem; text-align: left; }
+            .timeline-item .icon-box { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/images/logo.webp" alt="Agriculture & Farm Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Crops.html">Crops</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="Login.html" class="btn btn-outline">Login</a>
+            <a href="Signup.html" class="btn btn-primary">Get Started</a>
+            <i class="fas fa-bars mobile-menu-btn"></i>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="hero-bg animate-waterFlow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-leaf"></i> Smart Farming, Better Future</span>
+                <h1>Grow Smarter. Farm Better. Build a Sustainable Future.</h1>
+                <p>Manage crops, monitor activities, improve productivity, and make data-driven decisions with our advanced agriculture platform.</p>
+                <div class="hero-buttons">
+                    <a href="Signup.html" class="btn btn-primary">Get Started</a>
+                    <a href="About.html" class="btn btn-accent">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card fc-1 animate-float">
+                    <i class="fas fa-seedling"></i>
+                    <div>
+                        <h4>Crop Growth</h4>
+                        <p style="color:var(--primary-color); font-weight:bold;">85% <i class="fas fa-arrow-up"></i></p>
+                    </div>
+                </div>
+                <div class="floating-card fc-2 animate-float" style="animation-delay: 1s;">
+                    <i class="fas fa-cloud-sun-rain"></i>
+                    <div>
+                        <h4>Soil Moisture</h4>
+                        <p>Optimal</p>
+                    </div>
+                </div>
+                <div class="floating-card fc-3 animate-float" style="animation-delay: 2s;">
+                    <i class="fas fa-tractor"></i>
+                    <div>
+                        <h4>Farm Activity</h4>
+                        <p>Harvesting soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 01: Complete Farm Management -->
+    <section class="section-padding animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Manage Your Farm</h2>
+                <p>Connect farm information, plan crops, and monitor resources all in one unified platform.</p>
+            </div>
+            <div class="grid-3 stagger-grid">
+                <div class="card hover-lift text-center">
+                    <img src="assets/images/farm-management.webp" alt="Farm Management" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                    <h3>Farm Management</h3>
+                    <p>Organize fields, track machinery, and optimize your entire agricultural operation.</p>
+                </div>
+                <div class="card hover-lift text-center">
+                    <img src="assets/images/soil-monitoring.webp" alt="Soil Monitoring" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                    <h3>Soil Monitoring</h3>
+                    <p>Real-time insights on soil health, pH levels, and nutrient requirements.</p>
+                </div>
+                <div class="card hover-lift text-center">
+                    <img src="assets/images/irrigation.webp" alt="Irrigation" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                    <h3>Irrigation Planning</h3>
+                    <p>Smart water distribution based on crop needs and weather forecasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: Crop Management -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plan Every Crop With Confidence</h2>
+                <p>Track every stage from seed selection to harvest.</p>
+            </div>
+            <div class="growth-timeline">
+                <div class="timeline-item">
+                    <div class="icon-box"><i class="fas fa-seedling"></i></div>
+                    <h4>Seed</h4>
+                    <p>Selection & prep</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                    <h4>Germination</h4>
+                    <p>Early sprouts</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-box"><i class="fas fa-tree"></i></div>
+                    <h4>Growth</h4>
+                    <p>Vegetative stage</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-box"><i class="fas fa-sun"></i></div>
+                    <h4>Flowering</h4>
+                    <p>Pollination</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-box"><i class="fas fa-apple-whole"></i></div>
+                    <h4>Harvest</h4>
+                    <p>Collection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: Crop Advisory -->
+    <section class="section-padding animate-section">
+        <div class="container grid-2">
+            <div>
+                <img src="assets/images/farmer-tablet.webp" alt="Advisory" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-lg);">
+            </div>
+            <div style="display:flex; flex-direction:column; justify-content:center;">
+                <h2>Make Better Farming Decisions</h2>
+                <p style="margin-bottom:2rem;">Our interactive crop advisory provides personalized recommendations based on your soil type, season, and local climate.</p>
+                
+                <div class="card hover-lift" style="margin-bottom:1rem; border-left: 4px solid var(--primary-color);">
+                    <h4><i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Weather Integration</h4>
+                    <p>Predictive planting based on upcoming weather patterns.</p>
+                </div>
+                <div class="card hover-lift" style="border-left: 4px solid var(--primary-color);">
+                    <h4><i class="fas fa-check-circle" style="color:var(--primary-color);"></i> Soil Compatibility</h4>
+                    <p>Match crops to your exact soil nutrition profile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: Analytics / Stats -->
+    <section class="statistics-section animate-section">
+        <div class="container grid-4">
+            <div class="stat-box">
+                <h3><span class="counter" data-target="12500">0</span>+</h3>
+                <p>Happy Farmers</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-target="150">0</span>+</h3>
+                <p>Crop Varieties</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-target="98">0</span>%</h3>
+                <p>Success Rate</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-target="30">0</span>%</h3>
+                <p>Water Saved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 07: Built For Every Need -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built For Every Agricultural Need</h2>
+                <p>Empowering everyone in the agriculture ecosystem.</p>
+            </div>
+            <div class="grid-3 stagger-grid">
+                <div class="card hover-lift text-center">
+                    <i class="fas fa-user-tie" style="font-size:3rem; color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Farm Owners</h3>
+                    <p>High-level overviews and ROI tracking.</p>
+                </div>
+                <div class="card hover-lift text-center">
+                    <i class="fas fa-tractor" style="font-size:3rem; color:var(--accent-color); margin-bottom:1rem;"></i>
+                    <h3>Farmers</h3>
+                    <p>Daily task management and crop tracking.</p>
+                </div>
+                <div class="card hover-lift text-center">
+                    <i class="fas fa-microscope" style="font-size:3rem; color:var(--primary-color); margin-bottom:1rem;"></i>
+                    <h3>Agri Professionals</h3>
+                    <p>Advanced data analytics and soil charting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 09: CTA -->
+    <section class="section-padding text-center animate-section" style="background: linear-gradient(135deg, var(--primary-color), #1b5e20); color:white; border-radius:var(--border-radius); margin: 0 5%;">
+        <h2>Ready to Grow Smarter?</h2>
+        <p style="color:rgba(255,255,255,0.8); margin-bottom:2rem; max-width:600px; margin-inline:auto;">Bring crop planning, farm management, and agricultural knowledge together.</p>
+        <div style="display:flex; justify-content:center; gap:1rem;">
+            <a href="Signup.html" class="btn btn-accent animate-pulse-btn">Get Started</a>
+            <a href="Services.html" class="btn" style="background:transparent; border:2px solid white; color:white;">Explore Solutions</a>
+        </div>
+    </section>
+
+    
+    <!-- Home Extra 1: Testimonials -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Farmers Say</h2>
+                <p>Real stories from real users transforming their farms.</p>
+            </div>
+            <div class="grid-3 stagger-grid">
+                <div class="card hover-lift text-center" style="border-radius: 20px;">
+                    <p style="font-style:italic;">"Since using this platform, our crop yield increased by 20% due to accurate weather predictions."</p>
+                    <h4 style="margin-top:1rem; color:var(--primary-color);">- Mark T., Ohio</h4>
+                </div>
+                <div class="card hover-lift text-center" style="border-radius: 20px;">
+                    <p style="font-style:italic;">"The soil monitoring feature is a game changer. We save on fertilizers and boost quality."</p>
+                    <h4 style="margin-top:1rem; color:var(--primary-color);">- Sarah L., California</h4>
+                </div>
+                <div class="card hover-lift text-center" style="border-radius: 20px;">
+                    <p style="font-style:italic;">"I can finally manage my machinery and labor in one place without messy spreadsheets."</p>
+                    <h4 style="margin-top:1rem; color:var(--primary-color);">- James P., Texas</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Extra 2: Partners -->
+    <section class="section-padding animate-section">
+        <div class="container text-center">
+            <h3 style="margin-bottom:2rem; color:var(--text-light);">Trusted By Industry Leaders</h3>
+            <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; opacity:0.6;">
+                <i class="fas fa-leaf fa-3x hover-grow"></i>
+                <i class="fas fa-seedling fa-3x hover-grow"></i>
+                <i class="fas fa-tractor fa-3x hover-grow"></i>
+                <i class="fas fa-cloud-sun fa-3x hover-grow"></i>
+                <i class="fas fa-water fa-3x hover-grow"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Extra 3: App Download -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container grid-2" style="align-items:center;">
+            <div>
+                <h2>Farming in Your Pocket</h2>
+                <p style="margin-bottom:2rem;">Download our mobile app to get real-time alerts, monitor soil sensors, and control irrigation on the go.</p>
+                <div style="display:flex; gap:1rem;">
+                    <button class="btn btn-outline"><i class="fab fa-apple"></i> App Store</button>
+                    <button class="btn btn-outline"><i class="fab fa-google-play"></i> Google Play</button>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <i class="fas fa-mobile-alt" style="font-size:10rem; color:var(--primary-color); animation: float 3s ease-in-out infinite;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Extra 4: Market Prices -->
+    <section class="section-padding animate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Market Prices</h2>
+                <p>Stay updated with the latest commodity trends.</p>
+            </div>
+            <div class="card" style="overflow-x:auto;">
+                <table style="width:100%; text-align:left; border-collapse:collapse;">
+                    <tr style="border-bottom:2px solid var(--primary-color);">
+                        <th style="padding:1rem;">Commodity</th>
+                        <th style="padding:1rem;">Price (USD)</th>
+                        <th style="padding:1rem;">Change</th>
+                    </tr>
+                    <tr style="border-bottom:1px solid #eee;" class="hover-lift">
+                        <td style="padding:1rem;">Wheat</td>
+                        <td style="padding:1rem;">$580.00 / ton</td>
+                        <td style="padding:1rem; color:green;"><i class="fas fa-arrow-up"></i> 1.2%</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #eee;" class="hover-lift">
+                        <td style="padding:1rem;">Corn</td>
+                        <td style="padding:1rem;">$430.50 / ton</td>
+                        <td style="padding:1rem; color:red;"><i class="fas fa-arrow-down"></i> 0.5%</td>
+                    </tr>
+                    <tr class="hover-lift">
+                        <td style="padding:1rem;">Soybeans</td>
+                        <td style="padding:1rem;">$980.20 / ton</td>
+                        <td style="padding:1rem; color:green;"><i class="fas fa-arrow-up"></i> 2.1%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Extra 5: Newsletter -->
+    <section class="section-padding text-center animate-section" style="background:var(--accent-color); margin-bottom: 2rem;">
+        <div class="container">
+            <h2>Join Our Weekly Newsletter</h2>
+            <p style="margin-bottom:2rem; color:var(--text-dark);">Get the latest farming tips and market insights directly to your inbox.</p>
+            <form style="max-width:500px; margin:0 auto; display:flex; gap:1rem;">
+                <input type="email" placeholder="Your Email Address" style="flex:1; padding:1rem; border-radius:30px; border:none; outline:none;">
+                <button type="submit" class="btn btn-primary" style="border-radius:30px;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
+                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                    <div class="social-links">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Crops.html">Crops</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Agriculture</h4>
+                    <ul>
+                        <li><a href="404.html">Crop Advisory</a></li>
+                        <li><a href="404.html">Farm Management</a></li>
+                        <li><a href="404.html">Farming Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="404.html">Help Center</a></li>
+                        <li><a href="404.html">FAQ</a></li>
+                        <li><a href="404.html">Farmer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <div style="margin-top:0.5rem;">
+                    <a href="404.html" style="margin-right:1rem;">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>

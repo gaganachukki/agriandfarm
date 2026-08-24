@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/harvest-planning.webp') center/cover;
+            padding: 10rem 0 5rem; text-align: center; color: white;
+        }
+        .faq-item {
+            background: var(--secondary-color);
+            border: 1px solid #eee; margin-bottom: 1rem; border-radius: 8px;
+        }
+        .faq-question {
+            padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;
+        }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 1.5rem; color: var(--text-light);
+        }
+        .faq-item.active .faq-answer { padding-bottom: 1.5rem; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand"><img src="assets/images/logo.webp" alt="Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Crops.html">Crops</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html" class="active">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="Login.html" class="btn btn-outline">Login</a>
+            <a href="Signup.html" class="btn btn-primary">Get Started</a>
+            <i class="fas fa-bars mobile-menu-btn"></i>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Our Blog.</h1>
+            <p style="font-size:1.2rem;">Latest insights, articles, and farming guides.</p>
+        </div>
+    </div>
+
+    <section class="section-padding container">
+        <h2 class="text-center" style="margin-bottom:3rem;">Farming FAQs</h2>
+        <div style="max-width:800px; margin:0 auto;">
+            <div class="faq-item">
+                <div class="faq-question">How do I start crop planning? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Begin by selecting your soil type and preferred season in the dashboard to get tailored crop recommendations.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is smart irrigation? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Smart irrigation calculates exact water needs based on crop stage and weather forecasts to save water and improve yield.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I manage multiple farms? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes, the Admin and Farmer dashboards allow you to add and monitor multiple farm profiles simultaneously.</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Blog Extra 1: Featured Post -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container grid-2" style="background:white; border-radius:20px; overflow:hidden; box-shadow:var(--shadow-lg);">
+            <div style="background:var(--primary-color); padding:4rem; color:white; display:flex; flex-direction:column; justify-content:center;">
+                <span style="background:var(--accent-color); color:var(--text-dark); padding:0.3rem 1rem; border-radius:20px; width:max-content; margin-bottom:1rem; font-weight:bold;">FEATURED</span>
+                <h2 style="color:white; margin-bottom:1rem;">The Future of AI in Soil Analysis</h2>
+                <p style="margin-bottom:2rem; color:rgba(255,255,255,0.8);">Discover how machine learning is drastically altering the way we understand and treat soil degradation globally.</p>
+                <a href="#" style="font-weight:bold; text-decoration:underline;">Read Full Article &rarr;</a>
+            </div>
+            <div style="background: url('assets/images/soil-monitoring.webp') center/cover; min-height:300px;"></div>
+        </div>
+    </section>
+
+    <!-- Blog Extra 2: Recent News -->
+    <section class="section-padding animate-section">
+        <div class="container">
+            <h2 style="margin-bottom:3rem;">Recent Articles</h2>
+            <div class="grid-3 stagger-grid">
+                <div class="card hover-lift">
+                    <div style="height:150px; background:#eee; border-radius:10px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center;"><i class="fas fa-image fa-2x text-light"></i></div>
+                    <small style="color:var(--primary-color);">Tractors & Tech</small>
+                    <h4 style="margin:0.5rem 0;">New Autonomous Harvester</h4>
+                    <p style="font-size:0.9rem;">Review of the latest self-driving combine.</p>
+                </div>
+                <div class="card hover-lift">
+                    <div style="height:150px; background:#eee; border-radius:10px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center;"><i class="fas fa-image fa-2x text-light"></i></div>
+                    <small style="color:var(--primary-color);">Market Watch</small>
+                    <h4 style="margin:0.5rem 0;">Soybean Prices Surge</h4>
+                    <p style="font-size:0.9rem;">What the latest trade policies mean for you.</p>
+                </div>
+                <div class="card hover-lift">
+                    <div style="height:150px; background:#eee; border-radius:10px; margin-bottom:1rem; display:flex; align-items:center; justify-content:center;"><i class="fas fa-image fa-2x text-light"></i></div>
+                    <small style="color:var(--primary-color);">Sustainability</small>
+                    <h4 style="margin:0.5rem 0;">Water Conservation Tips</h4>
+                    <p style="font-size:0.9rem;">5 easy ways to reduce water waste today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Extra 3: Video Tutorials -->
+    <section class="section-padding bg-light animate-section">
+        <div class="container text-center">
+            <h2>Video Tutorials</h2>
+            <p style="margin-bottom:3rem;">Watch step-by-step guides from agronomists.</p>
+            <div class="grid-2 stagger-grid">
+                <div class="card hover-lift" style="padding:0; overflow:hidden;">
+                    <div style="background:#000; height:200px; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-play-circle fa-4x" style="color:white; cursor:pointer;"></i>
+                    </div>
+                    <div style="padding:1.5rem;">
+                        <h4>How to Calibrate Soil Sensors</h4>
+                    </div>
+                </div>
+                <div class="card hover-lift" style="padding:0; overflow:hidden;">
+                    <div style="background:#000; height:200px; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-play-circle fa-4x" style="color:white; cursor:pointer;"></i>
+                    </div>
+                    <div style="padding:1.5rem;">
+                        <h4>Dashboard Setup Guide</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Extra 4: Podcast -->
+    <section class="section-padding animate-section">
+        <div class="container grid-2" style="align-items:center;">
+            <div>
+                <i class="fas fa-microphone-alt" style="font-size:10rem; color:var(--primary-color);"></i>
+            </div>
+            <div>
+                <h2>The AgriTalk Podcast</h2>
+                <p>Listen to weekly interviews with farming innovators.</p>
+                <div class="card hover-lift" style="margin-top:1rem; padding:1rem; display:flex; justify-content:space-between; align-items:center;">
+                    <div><strong>Ep 104: Vertical Farming Myths</strong><br><small>24 mins</small></div>
+                    <button class="btn btn-primary" style="padding:0.5rem 1rem;"><i class="fas fa-play"></i></button>
+                </div>
+                <div class="card hover-lift" style="margin-top:1rem; padding:1rem; display:flex; justify-content:space-between; align-items:center;">
+                    <div><strong>Ep 103: Drone Regulations 2026</strong><br><small>30 mins</small></div>
+                    <button class="btn btn-primary" style="padding:0.5rem 1rem;"><i class="fas fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Extra 5: Categories -->
+    <section class="section-padding bg-light animate-section text-center">
+        <div class="container">
+            <h2 style="margin-bottom:2rem;">Explore by Category</h2>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer;" class="hover-lift">Livestock</span>
+                <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer; background:var(--primary-color); color:white;" class="hover-lift">Crops</span>
+                <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer;" class="hover-lift">AgriTech</span>
+                <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer;" class="hover-lift">Market Analysis</span>
+                <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer;" class="hover-lift">Policy</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
+                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Crops.html">Crops</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

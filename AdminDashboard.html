@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="assets/images/logo.webp" alt="Logo">
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-users"></i> Farmers</a>
+                <a href="#"><i class="fas fa-tractor"></i> Farms</a>
+                <a href="#"><i class="fas fa-seedling"></i> Crops</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
+                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <i class="fas fa-bars mobile-toggle" style="display:none;"></i>
+                <div class="search-bar">
+                    <input type="text" class="form-control dashboard-search" placeholder="Search..." style="border-radius: 20px;">
+                </div>
+                <div class="user-profile">
+                    <span>Admin User</span>
+                    <i class="fas fa-user-circle" style="font-size:2rem; color:var(--primary-color);"></i>
+                </div>
+            </header>
+
+            <!-- KPIs -->
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-users"></i></div>
+                    <div class="kpi-info">
+                        <h4>Total Farmers</h4>
+                        <h2>1,250</h2>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-tractor"></i></div>
+                    <div class="kpi-info">
+                        <h4>Total Farms</h4>
+                        <h2>850</h2>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="kpi-info">
+                        <h4>Active Crops</h4>
+                        <h2>3,420</h2>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="kpi-info">
+                        <h4>Pending Requests</h4>
+                        <h2>12</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Chart -->
+                <div class="panel">
+                    <h3 style="margin-bottom:1rem;">Crop Performance Overview</h3>
+                    <div style="height: 300px;">
+                        <canvas id="cropPerformanceChart"></canvas>
+                    </div>
+                </div>
+                <!-- Recent Activities -->
+                <div class="panel">
+                    <h3 style="margin-bottom:1rem;">Recent Activities</h3>
+                    <ul style="list-style:none;">
+                        <li style="padding:1rem 0; border-bottom:1px solid #eee;">
+                            <strong style="color:var(--primary-color);">New Farmer</strong> registered from Ohio.
+                            <br><small class="text-light">2 hours ago</small>
+                        </li>
+                        <li style="padding:1rem 0; border-bottom:1px solid #eee;">
+                            <strong style="color:var(--primary-color);">Crop Advisory</strong> updated for Wheat.
+                            <br><small class="text-light">5 hours ago</small>
+                        </li>
+                        <li style="padding:1rem 0;">
+                            <strong style="color:var(--primary-color);">System Report</strong> generated successfully.
+                            <br><small class="text-light">1 day ago</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="panel" style="margin-top:2rem;">
+                <h3 style="margin-bottom:1rem;">Recent Farmer Registrations</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Farm Size</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Smith</td>
+                                <td>150 Acres</td>
+                                <td>Texas</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="btn btn-outline" style="padding:0.3rem 0.8rem;">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Jenkins</td>
+                                <td>45 Acres</td>
+                                <td>California</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><button class="btn btn-outline" style="padding:0.3rem 0.8rem;">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mike Johnson</td>
+                                <td>300 Acres</td>
+                                <td>Iowa</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="btn btn-outline" style="padding:0.3rem 0.8rem;">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
