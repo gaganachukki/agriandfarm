@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             y: 50,
             opacity: 0,
             duration: 0.8,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "transform, opacity"
         });
     });
 
@@ -67,35 +68,118 @@ document.addEventListener("DOMContentLoaded", (event) => {
             opacity: 0,
             duration: 0.6,
             stagger: 0.15,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "transform, opacity"
         });
     });
 
-    // Parallax effect on hero background
-    if(document.querySelector('.hero-section')) {
-        gsap.to(".hero-bg", {
+    // Stats counter animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        ScrollTrigger.create({
+            trigger: counter,
+            start: "top 90%",
+            once: true,
+            onEnter: () => {
+                gsap.to(counter, {
+                    innerHTML: target,
+                    duration: 2,
+                    snap: { innerHTML: 1 },
+                    ease: "power1.inOut"
+                });
+            }
+        });
+    });
+
+    // GSAP Hover for .hover-lift to avoid CSS transition conflicts
+    const hoverCards = document.querySelectorAll('.hover-lift');
+    hoverCards.forEach(card => {
+        card.addEventListener('mouseenter', () => gsap.to(card, {y: -5, duration: 0.3, ease: 'power1.out'}));
+        card.addEventListener('mouseleave', () => gsap.to(card, {y: 0, duration: 0.3, ease: 'power1.out'}));
+    });
+    
+    // Particle Animation
+    if(document.getElementById('hero-particles')) {
+        // Safe check if tsParticles is loaded
+        if (typeof tsParticles !== 'undefined') {
+            tsParticles.load('hero-particles', {
+                fpsLimit: 60,
+                particles: {
+                    color: { value: '#A5D6A7' },
+                    links: { enable: true, color: '#A5D6A7', distance: 150, opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 1.5, direction: 'none', random: true, straight: false, outModes: 'out' },
+                    number: { density: { enable: true, area: 800 }, value: 60 },
+                    opacity: { value: 0.5 },
+                    shape: { type: 'circle' },
+                    size: { value: { min: 1, max: 3 } }
+                },
+                detectRetina: true
+            });
+        }
+    }
+
+    // GSAP Parallax Layers
+    if(document.querySelector('.parallax-container')) {
+        gsap.to('.pl-bg', {
+            yPercent: 30,
+            ease: 'none',
             scrollTrigger: {
-                trigger: ".hero-section",
-                start: "top top",
-                end: "bottom top",
+                trigger: '.parallax-container',
+                start: 'top bottom',
+                end: 'bottom top',
                 scrub: true
-            },
-            y: 100
+            }
+        });
+        gsap.to('.pl-fg', {
+            yPercent: -20,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.parallax-container',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+        gsap.from('.mask-reveal span', {
+            yPercent: 100,
+            opacity: 0,
+            duration: 1,
+            ease: 'power4.out',
+            scrollTrigger: {
+                trigger: '.parallax-container',
+                start: 'top 60%'
+            }
         });
     }
 
-    // Crop Growth Timeline Animation
-    if(document.querySelector('.growth-timeline')) {
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        gsap.from(timelineItems, {
-            scrollTrigger: {
-                trigger: ".growth-timeline",
-                start: "top 70%"
-            },
-            x: -30,
+    // 3D Flip Cards (Crops page etc.)
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+        gsap.from(card, {
+            rotationY: 90,
             opacity: 0,
-            stagger: 0.3,
-            duration: 0.6
+            duration: 0.8,
+            ease: 'back.out(1.5)',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%'
+            }
+        });
+    });
+
+    // Horizontal Marquee (Blog)
+    const marquee = document.querySelector('.marquee-content');
+    if(marquee) {
+        gsap.to(marquee, {
+            xPercent: -50,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.marquee-container',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1
+            }
         });
     }
 

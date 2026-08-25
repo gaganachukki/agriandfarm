@@ -6,7 +6,7 @@
     <title>Services | Agriculture & Farm</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/story-3.webp') center/cover;
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <section class="section-padding container">
+    <section class="animate-section section-padding container">
         <div class="grid-3">
             <div class="card text-center hover-lift">
                 <i class="fas fa-seedling" style="font-size:3rem; color:var(--primary-color); margin-bottom:1rem;"></i>
@@ -174,12 +174,18 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
-                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <p>A premium partner for farm management and agricultural solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -189,16 +195,45 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest agricultural updates and farm news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

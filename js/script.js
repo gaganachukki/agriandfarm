@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    const navActions = document.querySelector('.nav-actions .btn');
+    const navActions = document.querySelectorAll('.nav-actions .btn');
     
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            if(navActions) navActions.classList.toggle('active-mobile');
+            navActions.forEach(btn => btn.classList.toggle('active-mobile'));
         });
     }
 
@@ -95,3 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (counterSection) counterObserver.observe(counterSection);
 
 });
+
+    // Scroll to top
+    const scrollTop = document.querySelector('.scroll-top');
+    if (scrollTop) {
+        scrollTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }

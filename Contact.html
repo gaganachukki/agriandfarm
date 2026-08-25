@@ -6,10 +6,10 @@
     <title>Contact | Agriculture & Farm</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/story-1.webp') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero-bg.webp') center/cover;
             padding: 10rem 0 5rem; text-align: center; color: white;
         }
         .form-group { margin-bottom: 1.5rem; position: relative; }
@@ -44,11 +44,11 @@
         </div>
     </div>
 
-    <section class="section-padding container">
+    <section class="animate-section section-padding container">
         <div class="grid-2">
             <div>
                 <h2 style="margin-bottom:1rem;">Get in Touch</h2>
-                <p style="margin-bottom:2rem;">Have questions about our platform? Need agricultural consultation? We are here to help.</p>
+                <p style="">Have questions about our platform? Need agricultural consultation? We are here to help.</p>
                 <div style="margin-bottom:1.5rem;">
                     <strong><i class="fas fa-map-marker-alt" style="color:var(--primary-color); width:20px;"></i> Address:</strong> 123 Farming Valley, Agri State 10020
                 </div>
@@ -169,7 +169,7 @@
     <section class="section-padding animate-section text-center">
         <div class="container">
             <h2>Media & Press Inquiries</h2>
-            <p style="margin-bottom:2rem;">Are you a journalist or media professional?</p>
+            <p style="">Are you a journalist or media professional?</p>
             <div class="card hover-lift" style="display:inline-block; padding:2rem 4rem;">
                 <i class="fas fa-newspaper fa-2x" style="color:var(--primary-color); margin-bottom:1rem;"></i>
                 <h4>Email our PR Team</h4>
@@ -182,10 +182,10 @@
     <section class="section-padding text-center animate-section" style="background:var(--primary-color); color:white;">
         <div class="container">
             <h2 style="color:white;">Join Our Social Community</h2>
-            <p style="color:rgba(255,255,255,0.8); margin-bottom:2rem;">Connect with 50,000+ farmers worldwide.</p>
+            <p style="color:rgba(255,255,255,0.8); ">Connect with 50,000+ farmers worldwide.</p>
             <div style="display:flex; justify-content:center; gap:2rem;">
                 <i class="fab fa-facebook fa-3x hover-lift" style="cursor:pointer;"></i>
-                <i class="fab fa-twitter fa-3x hover-lift" style="cursor:pointer;"></i>
+                <i class="fa-brands fa-x-twitter fa-3x hover-lift" style="cursor:pointer;"></i>
                 <i class="fab fa-instagram fa-3x hover-lift" style="cursor:pointer;"></i>
                 <i class="fab fa-youtube fa-3x hover-lift" style="cursor:pointer;"></i>
             </div>
@@ -193,12 +193,18 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
-                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <p>A premium partner for farm management and agricultural solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -208,18 +214,47 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest agricultural updates and farm news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/validation.js"></script>
 </body>
 </html>

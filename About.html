@@ -6,7 +6,7 @@
     <title>About | Agriculture & Farm</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/farm-management.webp') center/cover;
@@ -47,39 +47,38 @@
         </div>
     </div>
 
-    <section class="section-padding container">
-        <div class="feature-row">
-            <div>
-                <h2>1. Farm Management</h2>
-                <p>Map your fields, organize your equipment, and manage daily tasks across your entire farm from a single dashboard.</p>
-            </div>
-            <div>
-                <img src="assets/images/farm-management.webp" alt="Farm Management" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
-            </div>
+    <section class="animate-section section-padding container">
+    <div class="grid-3 stagger-grid">
+        <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
+            <img src="assets/images/farm-management.webp" alt="Farm Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h3 style="color:var(--primary-color);">1. Farm Management</h3>
+            <p>Map your fields, organize your equipment, and manage daily tasks across your entire farm from a single dashboard.</p>
         </div>
         
-        <div class="feature-row reverse">
-            <div>
-                <h2>2. Crop Management</h2>
-                <p>Track planting dates, monitor growth stages, and predict harvest times with our intelligent crop timelines.</p>
-            </div>
-            <div>
-                <img src="assets/images/crop-flowering.webp" alt="Crop Management" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
-            </div>
+        <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
+            <img src="assets/images/crop-vegetative.webp" alt="Crop Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h3 style="color:var(--primary-color);">2. Crop Management</h3>
+            <p>Track planting dates, monitor growth stages, and predict harvest times with our intelligent crop timelines.</p>
         </div>
 
-        <div class="feature-row">
-            <div>
-                <h2>3. Soil & Water Management</h2>
-                <p>Ensure your soil is healthy and your crops are hydrated using our smart irrigation and soil monitoring tools.</p>
-            </div>
-            <div>
-                <img src="assets/images/soil-monitoring.webp" alt="Soil" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow-md);">
-            </div>
+        <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
+            <img src="assets/images/soil-monitoring.webp" alt="Soil" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <h3 style="color:var(--primary-color);">3. Soil & Water Management</h3>
+            <p>Ensure your soil is healthy and your crops are hydrated using our smart irrigation and soil monitoring tools.</p>
+        </div>
+    </div>
+</section>
+
+      <!-- Interactive Parallax Section -->
+    <section class="animate-section parallax-container" style="position: relative; height: 80vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <div class="parallax-layer pl-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 150%; background: url('assets/images/parallax_bg.webp') center/cover; z-index: -2;"></div>
+        <div class="parallax-layer pl-fg" style="position: absolute; bottom: -10%; right: -5%; width: 60%; height: 120%; background: url('assets/images/tractor_fg.webp') no-repeat bottom right/contain; z-index: -1;"></div>
+        <div class="container" style="z-index: 1; text-align: center;">
+            <h2 class="mask-reveal" style="font-size: 4rem; color: white; text-shadow: 0 4px 10px rgba(0,0,0,0.5); overflow: hidden;"><span style="display: block;">Cultivating The Future</span></h2>
+            <p style="color: white; font-size: 1.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">Technology meets tradition.</p>
         </div>
     </section>
 
-    
     <!-- About Extra 1: Our Timeline -->
     <section class="section-padding bg-light animate-section">
         <div class="container">
@@ -88,13 +87,13 @@
                 <p>How we grew from a small idea to a global platform.</p>
             </div>
             <div style="border-left: 4px solid var(--primary-color); padding-left: 2rem; margin-left: 2rem;">
-                <div style="margin-bottom:2rem; position:relative;" class="hover-lift">
+                <div style=" position:relative;" class="hover-lift">
                     <i class="fas fa-circle" style="position:absolute; left:-2.6rem; top:0; color:var(--primary-color);"></i>
                     <h4 style="color:var(--primary-color);">2018</h4>
                     <h3>The Seed is Planted</h3>
                     <p>Started as a small local farm management tool for a community of 50 farmers.</p>
                 </div>
-                <div style="margin-bottom:2rem; position:relative;" class="hover-lift">
+                <div style=" position:relative;" class="hover-lift">
                     <i class="fas fa-circle" style="position:absolute; left:-2.6rem; top:0; color:var(--primary-color);"></i>
                     <h4 style="color:var(--primary-color);">2022</h4>
                     <h3>Sprouting Up</h3>
@@ -202,12 +201,18 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
-                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <p>A premium partner for farm management and agricultural solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -217,16 +222,45 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest agricultural updates and farm news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Crops | Agriculture & Farm</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/crop-vegetative.webp') center/cover;
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <section class="section-padding container">
+    <section class="animate-section section-padding container">
         <div class="filter-bar">
             <button class="filter-btn active">All</button>
             <button class="filter-btn">Kharif</button>
@@ -63,21 +63,21 @@
         </div>
 
         <div class="grid-3">
-            <div class="card">
+            <div class="card flip-card">
                 <img src="assets/images/crop-seed.webp" alt="Wheat" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                 <h3>Wheat</h3>
                 <p>Season: Rabi</p>
                 <p>Duration: 120 Days</p>
                 <a href="404.html" class="btn btn-outline" style="margin-top:1rem; width:100%;">Learn More</a>
             </div>
-            <div class="card">
-                <img src="assets/images/crop-germination.webp" alt="Corn" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+            <div class="card flip-card">
+                <img src="assets/images/crop-seed.webp" alt="Corn" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                 <h3>Corn</h3>
                 <p>Season: Kharif</p>
                 <p>Duration: 90 Days</p>
                 <a href="404.html" class="btn btn-outline" style="margin-top:1rem; width:100%;">Learn More</a>
             </div>
-            <div class="card">
+            <div class="card flip-card">
                 <img src="assets/images/crop-harvest.webp" alt="Rice" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                 <h3>Rice</h3>
                 <p>Season: Kharif</p>
@@ -95,7 +95,7 @@
                 <h2>Visual Crop Calendar</h2>
                 <p>Optimal planting months across regions.</p>
             </div>
-            <div class="card">
+            <div class="card flip-card">
                 <div style="display:flex; justify-content:space-between; border-bottom:2px solid var(--primary-color); padding-bottom:1rem;">
                     <strong>Crop</strong>
                     <strong>Planting Window</strong>
@@ -144,8 +144,8 @@
     <section class="section-padding bg-light animate-section text-center">
         <div class="container">
             <h2>Crop Yield Estimator</h2>
-            <p style="margin-bottom:2rem;">Calculate potential earnings based on area and crop type.</p>
-            <div class="card" style="max-width:600px; margin:0 auto; text-align:left;">
+            <p style="">Calculate potential earnings based on area and crop type.</p>
+            <div class="card flip-card" style="max-width:600px; margin:0 auto; text-align:left;">
                 <div style="margin-bottom:1rem;">
                     <label>Land Size (Acres)</label>
                     <input type="number" value="10" style="width:100%; padding:0.8rem; margin-top:0.5rem; border:1px solid #ccc; border-radius:5px;">
@@ -197,12 +197,18 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
-                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <p>A premium partner for farm management and agricultural solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -212,16 +218,45 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest agricultural updates and farm news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

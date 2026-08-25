@@ -6,7 +6,7 @@
     <title>Blog | Agriculture & Farm</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/harvest-planning.webp') center/cover;
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <section class="section-padding container">
+    <section class="animate-section section-padding container">
         <h2 class="text-center" style="margin-bottom:3rem;">Farming FAQs</h2>
         <div style="max-width:800px; margin:0 auto;">
             <div class="faq-item">
@@ -78,7 +78,7 @@
             <div style="background:var(--primary-color); padding:4rem; color:white; display:flex; flex-direction:column; justify-content:center;">
                 <span style="background:var(--accent-color); color:var(--text-dark); padding:0.3rem 1rem; border-radius:20px; width:max-content; margin-bottom:1rem; font-weight:bold;">FEATURED</span>
                 <h2 style="color:white; margin-bottom:1rem;">The Future of AI in Soil Analysis</h2>
-                <p style="margin-bottom:2rem; color:rgba(255,255,255,0.8);">Discover how machine learning is drastically altering the way we understand and treat soil degradation globally.</p>
+                <p style=" color:rgba(255,255,255,0.8);">Discover how machine learning is drastically altering the way we understand and treat soil degradation globally.</p>
                 <a href="#" style="font-weight:bold; text-decoration:underline;">Read Full Article &rarr;</a>
             </div>
             <div style="background: url('assets/images/soil-monitoring.webp') center/cover; min-height:300px;"></div>
@@ -140,11 +140,11 @@
 
     <!-- Blog Extra 4: Podcast -->
     <section class="section-padding animate-section">
-        <div class="container grid-2" style="align-items:center;">
-            <div>
+        <div class="container" style="display:flex; align-items:center; justify-content:center; gap:4rem; flex-wrap:wrap;">
+            <div style="text-align:center;">
                 <i class="fas fa-microphone-alt" style="font-size:10rem; color:var(--primary-color);"></i>
             </div>
-            <div>
+            <div style="flex:1; min-width:300px; max-width:600px;">
                 <h2>The AgriTalk Podcast</h2>
                 <p>Listen to weekly interviews with farming innovators.</p>
                 <div class="card hover-lift" style="margin-top:1rem; padding:1rem; display:flex; justify-content:space-between; align-items:center;">
@@ -162,7 +162,7 @@
     <!-- Blog Extra 5: Categories -->
     <section class="section-padding bg-light animate-section text-center">
         <div class="container">
-            <h2 style="margin-bottom:2rem;">Explore by Category</h2>
+            <h2 style="">Explore by Category</h2>
             <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
                 <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer;" class="hover-lift">Livestock</span>
                 <span class="badge" style="font-size:1.2rem; padding:1rem 2rem; cursor:pointer; background:var(--primary-color); color:white;" class="hover-lift">Crops</span>
@@ -174,12 +174,18 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+        <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <img src="assets/images/logo.webp" alt="Logo" style="height:40px; margin-bottom:1rem; filter:grayscale(100%);">
-                    <p>Modern digital platform for farmers and agricultural businesses.</p>
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <p>A premium partner for farm management and agricultural solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -189,16 +195,45 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest agricultural updates and farm news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Agriculture & Farm. All rights reserved.</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
+        <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>
