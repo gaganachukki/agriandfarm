@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Admin User</h4>
+                    <p>admin@stackly.in</p>
+                    <span class="badge">ADMIN PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="AdminDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="ManageFarmers.html" class="active"><i class="fas fa-users"></i> Manage Farmers</a>
+
+                <div class="sidebar-category">ALERTS</div>
+                <a href="PushNotifications.html"><i class="fas fa-bell"></i> Push Notifications</a>
+                <a href="WeatherWarnings.html"><i class="fas fa-exclamation-triangle"></i> Weather Warnings</a>
+
+                <div class="sidebar-category">SYSTEM</div>
+                <a href="Analytics.html"><i class="fas fa-chart-line"></i> Analytics</a>
+                                <a href="AdminSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Admin Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">A</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Admin</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Manage Farmers</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Directory of all registered platform users and their activity status.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+            <div style="display:flex; gap:1rem; align-items:center;">
+                <input type="text" placeholder="Search by name, ID, or phone..." style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px; width:300px;">
+                <select style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;"><option>Filter by District</option><option>Madurai</option><option>Coimbatore</option></select>
+                <select style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;"><option>Filter by Status</option><option>Active</option><option>Suspended</option></select>
+            </div>
+            <div>
+                <button class="btn btn-outline" style="margin-right:0.5rem;"><i class="fas fa-file-export"></i> Export CSV</button>
+                <button class="btn btn-primary"><i class="fas fa-user-plus"></i> Add Farmer</button>
+            </div>
+        </div>
+        <table style="width:100%; border-collapse:collapse; text-align:left; margin-bottom:2rem;">
+            <thead>
+                <tr style="background:var(--bg-light); border-bottom:2px solid #e2e8f0;">
+                    <th style="padding:1rem;"><input type="checkbox"></th>
+                    <th style="padding:1rem;">ID</th><th style="padding:1rem;">Name</th><th style="padding:1rem;">Phone</th><th style="padding:1rem;">District</th><th style="padding:1rem;">Crops</th><th style="padding:1rem;">Status</th><th style="padding:1rem;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1029</td><td style="padding:1rem; font-weight:600;">Ramesh Kumar</td><td style="padding:1rem;">+91 98765 43210</td><td style="padding:1rem;">Madurai</td><td style="padding:1rem;">Paddy, Sugarcane</td><td style="padding:1rem;"><span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Active</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1030</td><td style="padding:1rem; font-weight:600;">Suresh P.</td><td style="padding:1rem;">+91 91234 56789</td><td style="padding:1rem;">Coimbatore</td><td style="padding:1rem;">Cotton</td><td style="padding:1rem;"><span style="background:#fee2e2; color:#991b1b; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Suspended</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1031</td><td style="padding:1rem; font-weight:600;">Lakshmi N.</td><td style="padding:1rem;">+91 99887 76655</td><td style="padding:1rem;">Salem</td><td style="padding:1rem;">Groundnut, Maize</td><td style="padding:1rem;"><span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Active</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1032</td><td style="padding:1rem; font-weight:600;">Kannan V.</td><td style="padding:1rem;">+91 98444 33221</td><td style="padding:1rem;">Trichy</td><td style="padding:1rem;">Banana</td><td style="padding:1rem;"><span style="background:#fef9c3; color:#854d0e; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Pending</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1033</td><td style="padding:1rem; font-weight:600;">Rajesh M.</td><td style="padding:1rem;">+91 94333 11222</td><td style="padding:1rem;">Erode</td><td style="padding:1rem;">Turmeric</td><td style="padding:1rem;"><span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Active</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem;"><input type="checkbox"></td><td style="padding:1rem;">#F-1034</td><td style="padding:1rem; font-weight:600;">Anand K.</td><td style="padding:1rem;">+91 98111 44555</td><td style="padding:1rem;">Madurai</td><td style="padding:1rem;">Paddy</td><td style="padding:1rem;"><span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.8rem; font-weight:600;">Active</span></td><td style="padding:1rem;"><a href="#" style="color:var(--primary-color);">View</a></td></tr>
+            </tbody>
+        </table>
+        
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <p style="color:var(--text-light);">Showing 1 to 6 of 12,450 entries</p>
+            <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline" style="padding:0.5rem 1rem;">Previous</button>
+                <button class="btn btn-primary" style="padding:0.5rem 1rem;">1</button>
+                <button class="btn btn-outline" style="padding:0.5rem 1rem;">2</button>
+                <button class="btn btn-outline" style="padding:0.5rem 1rem;">3</button>
+                <span style="padding:0.5rem;">...</span>
+                <button class="btn btn-outline" style="padding:0.5rem 1rem;">Next</button>
+            </div>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

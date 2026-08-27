@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Account Settings</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Update your profile, farm details, and preferences.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div class="grid-2">
+            <div>
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Personal Profile</h3>
+                <form style="max-width:100%;">
+                    <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:2rem;">
+                        <div style="width:80px; height:80px; border-radius:50%; background:var(--primary-color); color:white; display:flex; align-items:center; justify-content:center; font-size:2.5rem; font-weight:bold;">R</div>
+                        <button type="button" class="btn btn-outline">Change Avatar</button>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Full Name</label>
+                        <input type="text" value="Ramesh Kumar" style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Email Address</label>
+                        <input type="email" value="ramesh@example.com" style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom:2rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Phone Number</label>
+                        <input type="tel" value="+91 98765 43210" style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                    </div>
+                </form>
+
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem; margin-top:3rem;">Notification Preferences</h3>
+                <form style="max-width:100%;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; padding:1rem; background:#f8fafc; border-radius:8px;">
+                        <div><h4 style="margin:0;">SMS Alerts</h4><p style="margin:0; font-size:0.85rem; color:var(--text-light);">Critical weather and price drops.</p></div>
+                        <input type="checkbox" checked style="width:20px; height:20px;">
+                    </div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; padding:1rem; background:#f8fafc; border-radius:8px;">
+                        <div><h4 style="margin:0;">Email Digests</h4><p style="margin:0; font-size:0.85rem; color:var(--text-light);">Weekly crop performance reports.</p></div>
+                        <input type="checkbox" checked style="width:20px; height:20px;">
+                    </div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; padding:1rem; background:#f8fafc; border-radius:8px;">
+                        <div><h4 style="margin:0;">WhatsApp Integration</h4><p style="margin:0; font-size:0.85rem; color:var(--text-light);">Receive AI pest diagnostics via WhatsApp.</p></div>
+                        <input type="checkbox" style="width:20px; height:20px;">
+                    </div>
+                </form>
+            </div>
+            
+            <div>
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Farm Details</h3>
+                <form style="max-width:100%; margin-bottom:3rem;">
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Total Farm Size (Acres)</label>
+                        <input type="number" value="12" style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Primary Soil Type</label>
+                        <select style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                            <option>Alluvial</option>
+                            <option selected>Black Cotton</option>
+                            <option>Red Soil</option>
+                            <option>Laterite</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Irrigation Method</label>
+                        <select style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                            <option>Rainfed</option>
+                            <option>Canal</option>
+                            <option selected>Drip/Sprinkler</option>
+                            <option>Tube Well</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <h3 style="margin-bottom:1.5rem; color:#dc2626; border-bottom:2px solid #fee2e2; padding-bottom:0.5rem;">Danger Zone</h3>
+                <div style="border:1px solid #fca5a5; background:#fef2f2; padding:1.5rem; border-radius:8px;">
+                    <h4 style="margin:0 0 0.5rem 0; color:#991b1b;">Delete Account</h4>
+                    <p style="margin:0 0 1rem 0; color:#b91c1c; font-size:0.9rem;">Once you delete your account, there is no going back. All farm data and crop history will be permanently erased.</p>
+                    <button class="btn" style="background:white; color:#dc2626; border:1px solid #dc2626;">Delete Account</button>
+                </div>
+            </div>
+        </div>
+        <hr style="border:0; border-top:1px solid #e2e8f0; margin:2rem 0;">
+        <button type="button" class="btn btn-primary" style="padding:1rem 3rem; font-size:1.1rem;"><i class="fas fa-save"></i> Save All Changes</button>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

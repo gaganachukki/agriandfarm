@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Admin User</h4>
+                    <p>admin@stackly.in</p>
+                    <span class="badge">ADMIN PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="AdminDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="ManageFarmers.html"><i class="fas fa-users"></i> Manage Farmers</a>
+
+                <div class="sidebar-category">ALERTS</div>
+                <a href="PushNotifications.html" class="active"><i class="fas fa-bell"></i> Push Notifications</a>
+                <a href="WeatherWarnings.html"><i class="fas fa-exclamation-triangle"></i> Weather Warnings</a>
+
+                <div class="sidebar-category">SYSTEM</div>
+                <a href="Analytics.html"><i class="fas fa-chart-line"></i> Analytics</a>
+                                <a href="AdminSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Admin Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">A</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Admin</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Push Notifications</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Broadcast alerts and advisories directly to farmer devices.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div class="grid-2">
+            <div>
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Compose Message</h3>
+                <form style="max-width:100%;">
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Target Audience</label>
+                        <select style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                            <option>All Farmers (Statewide)</option>
+                            <option>Madurai District Only</option>
+                            <option>Farmers growing Paddy</option>
+                            <option>Premium Members Only</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Notification Title</label>
+                        <input type="text" placeholder="e.g. Subsidized Fertilizer Available" style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Message Body</label>
+                        <textarea rows="6" placeholder="Type your message here..." style="width:100%; padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px; resize:vertical;"></textarea>
+                    </div>
+                    <div style="display:flex; gap:1rem; align-items:center; margin-bottom:2rem;">
+                        <input type="checkbox" id="sms_fallback" checked>
+                        <label for="sms_fallback">Send as SMS fallback if app is uninstalled</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="padding:1rem 2rem; font-size:1.1rem;"><i class="fas fa-paper-plane"></i> Send Broadcast Now</button>
+                </form>
+            </div>
+            
+            <div>
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Quick Templates</h3>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1rem; border-radius:8px; margin-bottom:1rem; cursor:pointer;" class="hover-lift">
+                    <h4 style="margin:0 0 0.5rem 0; color:var(--primary-color);">Market Price Update</h4>
+                    <p style="margin:0; font-size:0.85rem; color:var(--text-light);">"Prices for [Crop] have increased by [X]% at [Mandi]. Tap to view details."</p>
+                </div>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1rem; border-radius:8px; margin-bottom:1rem; cursor:pointer;" class="hover-lift">
+                    <h4 style="margin:0 0 0.5rem 0; color:var(--primary-color);">Govt Subsidy Alert</h4>
+                    <p style="margin:0; font-size:0.85rem; color:var(--text-light);">"New [Subsidy Name] is now available for application. Deadline: [Date]."</p>
+                </div>
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1rem; border-radius:8px; margin-bottom:2rem; cursor:pointer;" class="hover-lift">
+                    <h4 style="margin:0 0 0.5rem 0; color:var(--primary-color);">Pest Outbreak Warning</h4>
+                    <p style="margin:0; font-size:0.85rem; color:var(--text-light);">"Warning: [Pest] outbreak detected in [District]. Apply preventive measures."</p>
+                </div>
+                
+                <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Recent Broadcasts</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:0.5rem; margin-bottom:0.5rem;">
+                    <div><h5 style="margin:0;">Heavy Rain Warning</h5><p style="margin:0; font-size:0.8rem; color:var(--text-light);">Sent Today, 9:00 AM</p></div>
+                    <span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem; font-weight:bold;">98% Delivered</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:0.5rem; margin-bottom:0.5rem;">
+                    <div><h5 style="margin:0;">PM-Kisan Update</h5><p style="margin:0; font-size:0.8rem; color:var(--text-light);">Sent Yesterday</p></div>
+                    <span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem; font-weight:bold;">95% Delivered</span>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

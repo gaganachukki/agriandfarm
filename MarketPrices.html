@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html" class="active"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Market Prices</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Comprehensive live commodity pricing across major national mandis.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div style="display:flex; justify-content:space-between; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+            <input type="text" placeholder="Search commodities..." style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px; width:300px;">
+            <select style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px;"><option>All Regions</option><option>Tamil Nadu</option><option>Karnataka</option><option>Maharashtra</option></select>
+        </div>
+        <div style="height:350px; margin-bottom:2rem; width:100%;"><canvas id="priceTrendChart"></canvas></div>
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+                <tr style="background:var(--bg-light); border-bottom:2px solid #e2e8f0;">
+                    <th style="padding:1rem;">Commodity</th><th style="padding:1rem;">Mandi</th><th style="padding:1rem;">Price (₹/Quintal)</th><th style="padding:1rem;">Trend</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Paddy (Common)</td><td style="padding:1rem;">Madurai</td><td style="padding:1rem; font-weight:bold;">₹2,183</td><td style="padding:1rem; color:var(--primary-color);"><i class="fas fa-arrow-up"></i> +1.2%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Sugarcane</td><td style="padding:1rem;">Coimbatore</td><td style="padding:1rem; font-weight:bold;">₹3,400</td><td style="padding:1rem; color:var(--text-light);"><i class="fas fa-minus"></i> 0.0%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Cotton</td><td style="padding:1rem;">Tirupur</td><td style="padding:1rem; font-weight:bold;">₹7,200</td><td style="padding:1rem; color:#dc2626;"><i class="fas fa-arrow-down"></i> -2.4%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Turmeric</td><td style="padding:1rem;">Erode</td><td style="padding:1rem; font-weight:bold;">₹14,500</td><td style="padding:1rem; color:var(--primary-color);"><i class="fas fa-arrow-up"></i> +3.1%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Banana (Robusta)</td><td style="padding:1rem;">Trichy</td><td style="padding:1rem; font-weight:bold;">₹1,800</td><td style="padding:1rem; color:var(--primary-color);"><i class="fas fa-arrow-up"></i> +0.5%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Groundnut</td><td style="padding:1rem;">Salem</td><td style="padding:1rem; font-weight:bold;">₹6,100</td><td style="padding:1rem; color:#dc2626;"><i class="fas fa-arrow-down"></i> -1.1%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Maize</td><td style="padding:1rem;">Dindigul</td><td style="padding:1rem; font-weight:bold;">₹2,250</td><td style="padding:1rem; color:var(--text-light);"><i class="fas fa-minus"></i> 0.0%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Onion</td><td style="padding:1rem;">Nashik</td><td style="padding:1rem; font-weight:bold;">₹2,800</td><td style="padding:1rem; color:var(--primary-color);"><i class="fas fa-arrow-up"></i> +5.4%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Tomato</td><td style="padding:1rem;">Kolar</td><td style="padding:1rem; font-weight:bold;">₹1,200</td><td style="padding:1rem; color:#dc2626;"><i class="fas fa-arrow-down"></i> -8.2%</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Wheat</td><td style="padding:1rem;">Indore</td><td style="padding:1rem; font-weight:bold;">₹2,400</td><td style="padding:1rem; color:var(--primary-color);"><i class="fas fa-arrow-up"></i> +0.8%</td></tr>
+            </tbody>
+        </table>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

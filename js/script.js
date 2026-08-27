@@ -20,6 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             navActions.forEach(btn => btn.classList.toggle('active-mobile'));
+            
+            // Toggle hamburger to closing tag (X)
+            if (navLinks.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('fa-bars');
+                mobileMenuBtn.classList.add('fa-times');
+            } else {
+                mobileMenuBtn.classList.remove('fa-times');
+                mobileMenuBtn.classList.add('fa-bars');
+            }
+        });
+        
+        // Also close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('fa-times');
+                mobileMenuBtn.classList.add('fa-bars');
+            });
         });
     }
 

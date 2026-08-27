@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html" class="active"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Pest Library & Diagnostics</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Comprehensive database to identify and treat common agricultural threats.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div style="background:#f8fafc; border:2px dashed #cbd5e1; padding:3rem; border-radius:12px; text-align:center; margin-bottom:3rem;">
+            <i class="fas fa-camera fa-3x" style="color:#94a3b8; margin-bottom:1rem;"></i>
+            <h3 style="color:var(--text-dark);">AI Pest Diagnostics</h3>
+            <p style="color:var(--text-light); max-width:500px; margin:0 auto 1.5rem;">Upload a photo of an infected leaf or insect. Our AI will instantly identify the threat and recommend treatments.</p>
+            <button class="btn btn-primary"><i class="fas fa-upload"></i> Upload Photo</button>
+        </div>
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3 style="margin:0; color:var(--text-dark);">Known Threats Library</h3>
+            <input type="text" placeholder="Search pests by name or symptom..." style="padding:0.8rem; border:1px solid #e2e8f0; border-radius:8px; width:300px;">
+        </div>
+        
+        <div class="grid-2">
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <img src="assets/images/pest_aphids.webp" style="width:120px; height:120px; border-radius:8px; object-fit:cover;">
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Aphids</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Small sap-sucking insects that stunt plant growth and transmit viral diseases. Leaves may curl or yellow.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <img src="assets/images/pest_fall_armyworm.webp" style="width:120px; height:120px; border-radius:8px; object-fit:cover;">
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Fall Armyworm</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Highly destructive pest primarily affecting maize. Caterpillars feed aggressively on leaves and whorls.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <img src="assets/images/pest_stem_borer.webp" style="width:120px; height:120px; border-radius:8px; object-fit:cover;">
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Stem Borer</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Larvae bore into the stems of rice and maize, causing "dead hearts" or whiteheads. Severe yield loss.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <div style="width:120px; height:120px; border-radius:8px; background:#f1f5f9; display:flex; align-items:center; justify-content:center; color:#94a3b8;"><i class="fas fa-bug fa-3x"></i></div>
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Whitefly</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Tiny white winged insects that suck sap and spread leaf curl viruses, especially in cotton and tomatoes.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <div style="width:120px; height:120px; border-radius:8px; background:#f1f5f9; display:flex; align-items:center; justify-content:center; color:#94a3b8;"><i class="fas fa-spider fa-3x"></i></div>
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Red Spider Mite</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Microscopic mites that cause webbing and yellow stippling on leaves during hot, dry weather.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#fff; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0; box-shadow:var(--shadow-sm);">
+                <div style="width:120px; height:120px; border-radius:8px; background:#f1f5f9; display:flex; align-items:center; justify-content:center; color:#94a3b8;"><i class="fas fa-locust fa-3x"></i></div>
+                <div>
+                    <h4 style="margin:0 0 0.5rem 0; font-size:1.2rem;">Desert Locust</h4>
+                    <p style="font-size:0.85rem; color:var(--text-light); margin:0 0 1rem 0;">Swarming grasshoppers capable of devouring entire fields in hours. Requires community-level response.</p>
+                    <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:0.85rem;">View Treatments</a>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

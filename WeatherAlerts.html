@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html" class="active"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Weather Alerts</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Hyper-local forecasting and agricultural meteorological alerts.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <h3 style="margin-bottom:1rem; color:var(--text-dark);">7-Day Forecast (Madurai)</h3>
+        <div style="display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem; margin-bottom:2rem;">
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Mon</h4><i class="fas fa-sun fa-2x" style="color:#fbbf24; margin:1rem 0;"></i><p>34°C / 24°C</p></div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Tue</h4><i class="fas fa-cloud-sun fa-2x" style="color:#94a3b8; margin:1rem 0;"></i><p>32°C / 23°C</p></div>
+            <div style="background:#e0f2fe; border:1px solid #bae6fd; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Wed</h4><i class="fas fa-cloud-showers-heavy fa-2x" style="color:#0284c7; margin:1rem 0;"></i><p>28°C / 22°C</p></div>
+            <div style="background:#e0f2fe; border:1px solid #bae6fd; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Thu</h4><i class="fas fa-cloud-rain fa-2x" style="color:#0284c7; margin:1rem 0;"></i><p>29°C / 22°C</p></div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Fri</h4><i class="fas fa-cloud fa-2x" style="color:#94a3b8; margin:1rem 0;"></i><p>31°C / 23°C</p></div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Sat</h4><i class="fas fa-sun fa-2x" style="color:#fbbf24; margin:1rem 0;"></i><p>33°C / 24°C</p></div>
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:1.5rem; border-radius:8px; min-width:120px; text-align:center;"><h4>Sun</h4><i class="fas fa-sun fa-2x" style="color:#fbbf24; margin:1rem 0;"></i><p>35°C / 25°C</p></div>
+        </div>
+        
+        <h3 style="margin-bottom:1rem; color:var(--text-dark);">Active Advisories</h3>
+        <div style="background:#e0f2fe; border-left:4px solid #0284c7; padding:1.5rem; border-radius:8px; margin-bottom:1.5rem;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;"><i class="fas fa-cloud-showers-heavy fa-2x" style="color:#0284c7;"></i><h3 style="margin:0; color:#0284c7;">Heavy Rain Expected (Wed-Thu)</h3></div>
+            <p style="margin:0; color:#0369a1;">Expect 40mm of rainfall. <strong>Action required:</strong> Delay scheduled urea application on Paddy. Ensure drainage channels are clear.</p>
+        </div>
+        <div style="background:#fffbeb; border-left:4px solid #d97706; padding:1.5rem; border-radius:8px; margin-bottom:1.5rem;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;"><i class="fas fa-temperature-high fa-2x" style="color:#d97706;"></i><h3 style="margin:0; color:#d97706;">High Temperature Warning (Sunday)</h3></div>
+            <p style="margin:0; color:#b45309;">Temperatures will peak at 35°C. <strong>Action required:</strong> Ensure adequate irrigation for vulnerable seedlings on Saturday evening.</p>
+        </div>
+        <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:1.5rem; border-radius:8px; margin-bottom:1.5rem;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;"><i class="fas fa-wind fa-2x" style="color:#16a34a;"></i><h3 style="margin:0; color:#16a34a;">Optimal Spraying Conditions (Mon-Tue)</h3></div>
+            <p style="margin:0; color:#15803d;">Wind speeds are below 10 km/h with low humidity. Ideal window for pesticide application on Sugarcane.</p>
+        </div>
+        <div style="background:#fef2f2; border-left:4px solid #dc2626; padding:1.5rem; border-radius:8px;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;"><i class="fas fa-bug fa-2x" style="color:#dc2626;"></i><h3 style="margin:0; color:#dc2626;">Pest Favorable Conditions Alert</h3></div>
+            <p style="margin:0; color:#b91c1c;">High humidity combined with warm nights increases risk of Aphid infestation in Cotton. Monitor fields closely.</p>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

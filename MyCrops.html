@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html" class="active"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">My Crops</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Manage and track your active crop cycles in detail.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <h3 style="margin-bottom:1rem; color:var(--text-dark);">Active Crops</h3>
+        <div class="grid-3" style="margin-bottom:3rem;">
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0;">
+                <img src="assets/images/crop_paddy.webp" style="width:100%; border-radius:8px; height:150px; object-fit:cover; margin-bottom:1rem;">
+                <h3 style="color:var(--text-dark);">Paddy (Kharif)</h3>
+                <p style="color:var(--text-light); font-size:0.9rem;">Status: <span style="color:var(--primary-color); font-weight:bold;">Healthy</span></p>
+                <div style="width:100%; height:8px; background:#eee; border-radius:4px; margin:1rem 0;"><div style="width:65%; height:100%; background:var(--primary-color); border-radius:4px;"></div></div>
+                <p style="color:var(--text-light); font-size:0.9rem;">Growth Stage: Flowering (65%)</p>
+                <button class="btn btn-outline" style="width:100%; margin-top:1rem;">Update Status</button>
+            </div>
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0;">
+                <img src="assets/images/crop_sugarcane.webp" style="width:100%; border-radius:8px; height:150px; object-fit:cover; margin-bottom:1rem;">
+                <h3 style="color:var(--text-dark);">Sugarcane</h3>
+                <p style="color:var(--text-light); font-size:0.9rem;">Status: <span style="color:#f59e0b; font-weight:bold;">Needs Fertilizer</span></p>
+                <div style="width:100%; height:8px; background:#eee; border-radius:4px; margin:1rem 0;"><div style="width:40%; height:100%; background:#f59e0b; border-radius:4px;"></div></div>
+                <p style="color:var(--text-light); font-size:0.9rem;">Growth Stage: Tillering (40%)</p>
+                <button class="btn btn-outline" style="width:100%; margin-top:1rem;">Update Status</button>
+            </div>
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0;">
+                <img src="assets/images/crop_cotton.webp" style="width:100%; border-radius:8px; height:150px; object-fit:cover; margin-bottom:1rem;">
+                <h3 style="color:var(--text-dark);">Cotton</h3>
+                <p style="color:var(--text-light); font-size:0.9rem;">Status: <span style="color:var(--primary-color); font-weight:bold;">Healthy</span></p>
+                <div style="width:100%; height:8px; background:#eee; border-radius:4px; margin:1rem 0;"><div style="width:85%; height:100%; background:var(--primary-color); border-radius:4px;"></div></div>
+                <p style="color:var(--text-light); font-size:0.9rem;">Growth Stage: Boll Formation (85%)</p>
+                <button class="btn btn-outline" style="width:100%; margin-top:1rem;">Update Status</button>
+            </div>
+        </div>
+        
+        <h3 style="margin-bottom:1rem; color:var(--text-dark);">Upcoming Plantings</h3>
+        <div class="grid-2" style="margin-bottom:3rem;">
+            <div style="display:flex; gap:1.5rem; background:#f8fafc; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0;">
+                <img src="assets/images/crop_banana.webp" style="width:80px; height:80px; border-radius:8px; object-fit:cover;">
+                <div><h4 style="margin:0 0 0.5rem 0;">Banana (Robusta)</h4><p style="font-size:0.85rem; color:var(--text-light); margin:0;">Scheduled: Next Month<br>Prep: Soil tilling required</p></div>
+            </div>
+            <div style="display:flex; gap:1.5rem; background:#f8fafc; padding:1.5rem; border-radius:8px; border:1px solid #e2e8f0;">
+                <img src="assets/images/crop_groundnut.webp" style="width:80px; height:80px; border-radius:8px; object-fit:cover;">
+                <div><h4 style="margin:0 0 0.5rem 0;">Groundnut</h4><p style="font-size:0.85rem; color:var(--text-light); margin:0;">Scheduled: In 2 Months<br>Prep: Procuring seeds</p></div>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom:1rem; color:var(--text-dark);">Crop History (Past Yields)</h3>
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead><tr style="background:var(--bg-light); border-bottom:2px solid #e2e8f0;"><th style="padding:1rem;">Crop</th><th style="padding:1rem;">Harvest Date</th><th style="padding:1rem;">Yield (Tons)</th><th style="padding:1rem;">Revenue</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Maize</td><td style="padding:1rem;">Jan 2026</td><td style="padding:1rem;">14.2</td><td style="padding:1rem; color:var(--primary-color);">₹2,14,000</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Turmeric</td><td style="padding:1rem;">Nov 2025</td><td style="padding:1rem;">8.5</td><td style="padding:1rem; color:var(--primary-color);">₹5,80,000</td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Wheat</td><td style="padding:1rem;">Apr 2025</td><td style="padding:1rem;">12.0</td><td style="padding:1rem; color:var(--primary-color);">₹2,75,000</td></tr>
+            </tbody>
+        </table>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

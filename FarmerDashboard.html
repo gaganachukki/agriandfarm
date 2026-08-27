@@ -14,15 +14,31 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-brand">
-                <img src="assets/images/logo.webp" alt="Logo">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Ramesh Kumar</h4>
+                    <p>ramesh@example.com</p>
+                    <span class="badge">FARMER PANEL</span>
+                </div>
             </div>
             <nav class="sidebar-menu">
-                <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
-                <a href="#"><i class="fas fa-map"></i> My Farm</a>
-                <a href="#"><i class="fas fa-seedling"></i> My Crops</a>
-                <a href="#"><i class="fas fa-cloud-rain"></i> Irrigation</a>
-                <a href="#"><i class="fas fa-lightbulb"></i> Crop Advisory</a>
-                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <div class="sidebar-category">MAIN</div>
+                <a href="FarmerDashboard.html" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="MyCrops.html"><i class="fas fa-seedling"></i> My Crops</a>
+
+                <div class="sidebar-category">ADVISORY</div>
+                <a href="MarketPrices.html"><i class="fas fa-rupee-sign"></i> Market Prices</a>
+                <a href="WeatherAlerts.html"><i class="fas fa-cloud-sun"></i> Weather Alerts</a>
+
+                <div class="sidebar-category">RESOURCES</div>
+                <a href="PestLibrary.html"><i class="fas fa-bug"></i> Pest Library</a>
+                                <a href="FarmerSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </nav>
         </aside>
 
@@ -30,17 +46,52 @@
         <main class="main-content">
             <!-- Topbar -->
             <header class="topbar">
-                <i class="fas fa-bars mobile-toggle"></i>
-                <div>
-                    <h2 style="font-size:1.5rem; margin:0;">Welcome back, John!</h2>
-                    <p class="text-light" style="font-size:0.9rem;">Green Valley Farm | 150 Acres</p>
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Farmer Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
                 </div>
                 <div class="user-profile">
-                    <i class="fas fa-bell" style="font-size:1.2rem; margin-right:1rem; cursor:pointer;"></i>
-                    <i class="fas fa-user-circle" style="font-size:2rem; color:var(--primary-color);"></i>
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">R</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Ramesh</span>
                 </div>
             </header>
 
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <h1 style="color:white; font-size:2.8rem; line-height:1.2;">Welcome back,<br><span style="color:var(--primary-color);">Ramesh!</span> <i class="fas fa-hand-sparkles" style="color:#fbbf24;"></i></h1>
+                <p style="font-size:1.1rem; max-width:500px; margin-top:1rem; color:rgba(255,255,255,0.9);">You're one step closer to a better harvest today.</p>
+                <p style="font-style:italic; font-size:1rem; color:rgba(255,255,255,0.7); margin-top:0.5rem;">"Smart farming today, sustainable yield tomorrow."</p>
+                
+                <div class="welcome-stats-card">
+                    <div class="welcome-stat-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <div class="welcome-stat-info">
+                            <p>Member Since</p>
+                            <h4>Jan 2025</h4>
+                        </div>
+                    </div>
+                    <div class="welcome-stat-item">
+                        <i class="fas fa-star"></i>
+                        <div class="welcome-stat-info">
+                            <p>Membership</p>
+                            <h4>Premium</h4>
+                        </div>
+                    </div>
+                    <div class="welcome-stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="welcome-stat-info">
+                            <p>Primary Crop</p>
+                            <h4>Paddy (Kharif)</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="padding: 0 2rem;">
             <!-- KPIs -->
             <div class="kpi-cards">
                 <div class="kpi-card">
@@ -122,6 +173,7 @@
                 </div>
             </div>
 
+        </div>
         </main>
     </div>
 

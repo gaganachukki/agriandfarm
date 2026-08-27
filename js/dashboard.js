@@ -51,4 +51,41 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'Login.html';
         });
     }
+
+    // Dynamic UI Update based on Login Email
+    const userEmail = localStorage.getItem('userEmail');
+    if (userEmail) {
+        // Extract name from email (e.g. ramesh.kumar@example.com -> Ramesh Kumar)
+        let name = userEmail.split('@')[0];
+        name = name.replace(/[^a-zA-Z]/g, ' '); // Replace dots/numbers with spaces
+        
+        // Capitalize words
+        name = name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ').trim();
+        if (!name) name = "User";
+        
+        const initial = name.charAt(0).toUpperCase();
+
+        // 1. Update Sidebar Profile
+        const sidebarName = document.querySelector('.sidebar-user-info h4');
+        const sidebarEmail = document.querySelector('.sidebar-user-info p');
+        const sidebarAvatar = document.querySelector('.sidebar-user-avatar'); // Wait, Farmer uses <i class="fas fa-user"></i>, Admin uses logo. Let's just update if it's text.
+        
+        if (sidebarName) sidebarName.textContent = name;
+        if (sidebarEmail) sidebarEmail.textContent = userEmail;
+
+        // 2. Update Topbar Profile
+        // The topbar has a span for the name, and a div with text for the initial
+        const topbarName = document.querySelector('.user-profile span');
+        if (topbarName) topbarName.textContent = name;
+        
+        // Find the circle div inside user-profile (it has no class, but it's a div with width:35px)
+        const profileDivs = document.querySelectorAll('.user-profile div');
+        profileDivs.forEach(div => {
+            // Check if it's the avatar circle (usually has text content of length 1 or 2, like "A" or "R")
+            if (div.textContent.trim().length <= 2) {
+                div.textContent = initial;
+            }
+        });
+    }
+
 });

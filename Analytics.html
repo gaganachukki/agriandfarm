@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Admin User</h4>
+                    <p>admin@stackly.in</p>
+                    <span class="badge">ADMIN PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="AdminDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="ManageFarmers.html"><i class="fas fa-users"></i> Manage Farmers</a>
+
+                <div class="sidebar-category">ALERTS</div>
+                <a href="PushNotifications.html"><i class="fas fa-bell"></i> Push Notifications</a>
+                <a href="WeatherWarnings.html"><i class="fas fa-exclamation-triangle"></i> Weather Warnings</a>
+
+                <div class="sidebar-category">SYSTEM</div>
+                <a href="Analytics.html" class="active"><i class="fas fa-chart-line"></i> Analytics</a>
+                                <a href="AdminSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Admin Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">A</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Admin</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Platform Analytics</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Deep dive into user engagement, system performance, and agricultural trends.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div class="grid-3" style="margin-bottom:2rem;">
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0; background:linear-gradient(to right bottom, #ffffff, #f0fdf4);">
+                <h4 style="color:var(--text-light); margin:0 0 0.5rem 0;">Daily Active Users</h4>
+                <h2 style="margin:0; font-size:2.5rem; color:var(--primary-color);">8,241</h2>
+                <p style="color:#16a34a; margin:0.5rem 0 0 0; font-size:0.9rem; font-weight:bold;"><i class="fas fa-arrow-up"></i> +4.2% this week</p>
+            </div>
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0;">
+                <h4 style="color:var(--text-light); margin:0 0 0.5rem 0;">Monthly Active Users</h4>
+                <h2 style="margin:0; font-size:2.5rem; color:var(--text-dark);">24,890</h2>
+                <p style="color:#16a34a; margin:0.5rem 0 0 0; font-size:0.9rem; font-weight:bold;"><i class="fas fa-arrow-up"></i> +12% this month</p>
+            </div>
+            <div class="card hover-lift" style="padding:1.5rem; border:1px solid #e2e8f0; background:linear-gradient(to right bottom, #ffffff, #fef2f2);">
+                <h4 style="color:var(--text-light); margin:0 0 0.5rem 0;">System Crash Rate</h4>
+                <h2 style="margin:0; font-size:2.5rem; color:#dc2626;">0.04%</h2>
+                <p style="color:#16a34a; margin:0.5rem 0 0 0; font-size:0.9rem; font-weight:bold;"><i class="fas fa-check-circle"></i> Highly Stable</p>
+            </div>
+        </div>
+        
+        <div class="grid-2" style="margin-bottom:2rem;">
+            <div class="card" style="padding:2rem; border:1px solid #e2e8f0; min-height:350px;">
+                <h3 style="margin-top:0; color:var(--text-dark);">User Growth (Last 6 Months)</h3>
+                <div style="height:250px; border-bottom:1px solid #e2e8f0; border-left:1px solid #e2e8f0; position:relative; margin-top:2rem;">
+                    <!-- Fake Line Chart -->
+                    <svg viewBox="0 0 500 200" style="width:100%; height:100%; overflow:visible;">
+                        <polyline fill="none" stroke="var(--primary-color)" stroke-width="4" points="0,180 100,150 200,160 300,90 400,60 500,20"/>
+                        <circle cx="0" cy="180" r="5" fill="var(--primary-color)"/><circle cx="100" cy="150" r="5" fill="var(--primary-color)"/><circle cx="200" cy="160" r="5" fill="var(--primary-color)"/><circle cx="300" cy="90" r="5" fill="var(--primary-color)"/><circle cx="400" cy="60" r="5" fill="var(--primary-color)"/><circle cx="500" cy="20" r="5" fill="var(--primary-color)"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="card" style="padding:2rem; border:1px solid #e2e8f0; min-height:350px;">
+                <h3 style="margin-top:0; color:var(--text-dark);">Crop Distribution</h3>
+                <div style="display:flex; height:250px; align-items:center; justify-content:center; gap:2rem;">
+                    <!-- Fake Pie Chart -->
+                    <div style="width:180px; height:180px; border-radius:50%; background:conic-gradient(var(--primary-color) 0% 45%, #f59e0b 45% 70%, #0284c7 70% 90%, #94a3b8 90% 100%);"></div>
+                    <ul style="list-style:none; padding:0; margin:0;">
+                        <li style="margin-bottom:1rem;"><span style="display:inline-block; width:15px; height:15px; background:var(--primary-color); border-radius:3px; margin-right:10px;"></span> Paddy (45%)</li>
+                        <li style="margin-bottom:1rem;"><span style="display:inline-block; width:15px; height:15px; background:#f59e0b; border-radius:3px; margin-right:10px;"></span> Sugarcane (25%)</li>
+                        <li style="margin-bottom:1rem;"><span style="display:inline-block; width:15px; height:15px; background:#0284c7; border-radius:3px; margin-right:10px;"></span> Cotton (20%)</li>
+                        <li><span style="display:inline-block; width:15px; height:15px; background:#94a3b8; border-radius:3px; margin-right:10px;"></span> Others (10%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align:right;">
+            <button class="btn btn-outline" style="padding:0.8rem 2rem;"><i class="fas fa-download"></i> Generate Full PDF Report</button>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

@@ -14,15 +14,31 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-brand">
-                <img src="assets/images/logo.webp" alt="Logo">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Admin User</h4>
+                    <p>admin@stackly.in</p>
+                    <span class="badge">ADMIN PANEL</span>
+                </div>
             </div>
             <nav class="sidebar-menu">
-                <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
-                <a href="#"><i class="fas fa-users"></i> Farmers</a>
-                <a href="#"><i class="fas fa-tractor"></i> Farms</a>
-                <a href="#"><i class="fas fa-seedling"></i> Crops</a>
-                <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
-                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <div class="sidebar-category">MAIN</div>
+                <a href="AdminDashboard.html" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="ManageFarmers.html"><i class="fas fa-users"></i> Manage Farmers</a>
+
+                <div class="sidebar-category">ALERTS</div>
+                <a href="PushNotifications.html"><i class="fas fa-bell"></i> Push Notifications</a>
+                <a href="WeatherWarnings.html"><i class="fas fa-exclamation-triangle"></i> Weather Warnings</a>
+
+                <div class="sidebar-category">SYSTEM</div>
+                <a href="Analytics.html"><i class="fas fa-chart-line"></i> Analytics</a>
+                                <a href="AdminSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </nav>
         </aside>
 
@@ -30,16 +46,52 @@
         <main class="main-content">
             <!-- Topbar -->
             <header class="topbar">
-                <i class="fas fa-bars mobile-toggle"></i>
-                <div class="search-bar">
-                    <input type="text" class="form-control dashboard-search" placeholder="Search..." style="border-radius: 20px;">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Admin Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
                 </div>
                 <div class="user-profile">
-                    <span>Admin User</span>
-                    <i class="fas fa-user-circle" style="font-size:2rem; color:var(--primary-color);"></i>
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">A</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Admin</span>
                 </div>
             </header>
 
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <h1 style="color:white; font-size:2.8rem; line-height:1.2;">System Status:<br><span style="color:var(--primary-color);">Online</span> <i class="fas fa-check-circle" style="color:var(--primary-color);"></i></h1>
+                <p style="font-size:1.1rem; max-width:500px; margin-top:1rem; color:rgba(255,255,255,0.9);">Platform monitoring and farmer management console.</p>
+                <p style="font-style:italic; font-size:1rem; color:rgba(255,255,255,0.7); margin-top:0.5rem;">"Empowering 10,000+ farmers across Tamil Nadu."</p>
+                
+                <div class="welcome-stats-card">
+                    <div class="welcome-stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="welcome-stat-info">
+                            <p>Total Registered</p>
+                            <h4>12,450</h4>
+                        </div>
+                    </div>
+                    <div class="welcome-stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="welcome-stat-info">
+                            <p>Districts Covered</p>
+                            <h4>38 / 38</h4>
+                        </div>
+                    </div>
+                    <div class="welcome-stat-item">
+                        <i class="fas fa-server"></i>
+                        <div class="welcome-stat-info">
+                            <p>Server Health</p>
+                            <h4>99.9% Uptime</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="padding: 0 2rem;">
             <!-- KPIs -->
             <div class="kpi-cards">
                 <div class="kpi-card">
@@ -141,6 +193,7 @@
                 </div>
             </div>
 
+        </div>
         </main>
     </div>
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Agriculture & Farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            </div>
+            <div class="sidebar-user-card">
+                <div class="sidebar-user-avatar">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="sidebar-user-info">
+                    <h4>Admin User</h4>
+                    <p>admin@stackly.in</p>
+                    <span class="badge">ADMIN PANEL</span>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="sidebar-category">MAIN</div>
+                <a href="AdminDashboard.html" ><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="ManageFarmers.html"><i class="fas fa-users"></i> Manage Farmers</a>
+
+                <div class="sidebar-category">ALERTS</div>
+                <a href="PushNotifications.html"><i class="fas fa-bell"></i> Push Notifications</a>
+                <a href="WeatherWarnings.html" class="active"><i class="fas fa-exclamation-triangle"></i> Weather Warnings</a>
+
+                <div class="sidebar-category">SYSTEM</div>
+                <a href="Analytics.html"><i class="fas fa-chart-line"></i> Analytics</a>
+                                <a href="AdminSettings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" style="color: #dc2626;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-bars mobile-toggle"></i>
+                    <h2 class="desktop-title">Stackly Admin Portal</h2>
+                </div>
+                <div class="mobile-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Stackly"></a>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
+                    <div style="width:35px; height:35px; background:var(--primary-color); border-radius:8px; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">A</div>
+                    <span style="font-weight:600; font-size:0.95rem;">Admin</span>
+                </div>
+            </header>
+
+            
+            <div style="background: white; border-radius: 12px; padding: 3rem; margin: 0 2rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2.5rem;">Emergency Weather Override</h1>
+                <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Trigger massive regional alarms for extreme meteorological events.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
+                
+        <div style="background:#fee2e2; border:2px solid #ef4444; padding:3rem; border-radius:12px; text-align:center; margin-bottom:3rem;">
+            <i class="fas fa-exclamation-triangle fa-5x" style="color:#ef4444; margin-bottom:1.5rem; animation: pulse 2s infinite;"></i>
+            <h1 style="color:#991b1b; margin-bottom:1rem; font-size:2.5rem;">INITIATE OVERRIDE ALARM</h1>
+            <p style="color:#b91c1c; margin:0 auto 2rem; max-width:600px; font-size:1.1rem;">Use this panel only for severe life-threatening or catastrophic crop loss events (Cyclones, Flash Floods, Severe Droughts). These alerts will bypass all user 'Do Not Disturb' preferences and trigger loud SMS sirens instantly.</p>
+            <button class="btn" style="background:#ef4444; color:white; padding:1.2rem 3rem; font-size:1.2rem; font-weight:bold; box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);"><i class="fas fa-satellite-dish"></i> CONFIGURE EMERGENCY PAYLOAD</button>
+        </div>
+        
+        <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Automated Threshold Triggers</h3>
+        <table style="width:100%; border-collapse:collapse; text-align:left; margin-bottom:3rem;">
+            <thead>
+                <tr style="background:var(--bg-light); border-bottom:2px solid #e2e8f0;">
+                    <th style="padding:1rem;">Event Type</th><th style="padding:1rem;">Sensor / API Trigger</th><th style="padding:1rem;">Action Taken</th><th style="padding:1rem;">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Heatwave</td><td style="padding:1rem;">Temperature > 42°C for 48 hrs</td><td style="padding:1rem;">Auto-SMS to affected zip codes</td><td style="padding:1rem;"><span style="color:#16a34a; font-weight:bold;">Active</span> <i class="fas fa-toggle-on fa-lg" style="color:var(--primary-color); float:right; margin-top:2px;"></i></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Flash Flood</td><td style="padding:1rem;">Rainfall > 150mm in 12 hrs</td><td style="padding:1rem;">Emergency Override Push</td><td style="padding:1rem;"><span style="color:#16a34a; font-weight:bold;">Active</span> <i class="fas fa-toggle-on fa-lg" style="color:var(--primary-color); float:right; margin-top:2px;"></i></td></tr>
+                <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Frost</td><td style="padding:1rem;">Temperature < 4°C</td><td style="padding:1rem;">Standard Alert (Hilly Regions)</td><td style="padding:1rem;"><span style="color:#94a3b8; font-weight:bold;">Disabled</span> <i class="fas fa-toggle-off fa-lg" style="color:#cbd5e1; float:right; margin-top:2px;"></i></td></tr>
+            </tbody>
+        </table>
+        
+        <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Active Weather Anomalies (Live Radar)</h3>
+        <div style="height:400px; background:#0f172a; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#38bdf8; flex-direction:column;">
+            <i class="fas fa-satellite fa-4x" style="margin-bottom:1rem; opacity:0.8;"></i>
+            <h3>Live Meteorological Map Rendered Here</h3>
+            <p style="opacity:0.6;">(Connects to IMD Satellite API)</p>
+        </div>
+        
+            </div>
+    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

@@ -75,6 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Signup Validation
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
+        const nameInput = document.getElementById('name');
+        if (nameInput) {
+            nameInput.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+            });
+        }
         signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
             let isValid = true;
@@ -113,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
-                alert("Account created successfully! Please login.");
                 window.location.href = 'Login.html';
             }
         });

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .page-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/farm-management.webp') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/about_farming.webp') center/cover;
             padding: 10rem 0 5rem;
             text-align: center;
             color: white;
@@ -32,6 +32,8 @@
             <li><a href="Services.html">Services</a></li>
             <li><a href="Blog.html">Blog</a></li>
             <li><a href="Contact.html">Contact</a></li>
+            <li class="mobile-only"><a href="Login.html" class="btn btn-outline" style="display:inline-block; width:100%; margin-bottom:1rem;">Login</a></li>
+            <li class="mobile-only"><a href="Signup.html" class="btn btn-primary" style="display:inline-block; width:100%;">Get Started</a></li>
         </ul>
         <div class="nav-actions">
             <a href="Login.html" class="btn btn-outline">Login</a>
@@ -50,19 +52,19 @@
     <section class="animate-section section-padding container">
     <div class="grid-3 stagger-grid">
         <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
-            <img src="assets/images/farm-management.webp" alt="Farm Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <img src="assets/images/about_farming.webp" alt="Farm Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
             <h3 style="color:var(--primary-color);">1. Farm Management</h3>
             <p>Map your fields, organize your equipment, and manage daily tasks across your entire farm from a single dashboard.</p>
         </div>
         
         <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
-            <img src="assets/images/crop-vegetative.webp" alt="Crop Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <img src="assets/images/crop_field.webp" alt="Crop Management" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
             <h3 style="color:var(--primary-color);">2. Crop Management</h3>
             <p>Track planting dates, monitor growth stages, and predict harvest times with our intelligent crop timelines.</p>
         </div>
 
         <div class="card hover-lift text-center" style="border: 2px solid var(--primary-color);">
-            <img src="assets/images/soil-monitoring.webp" alt="Soil" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+            <img src="assets/images/market_vegetables.webp" alt="Soil" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
             <h3 style="color:var(--primary-color);">3. Soil & Water Management</h3>
             <p>Ensure your soil is healthy and your crops are hydrated using our smart irrigation and soil monitoring tools.</p>
         </div>
@@ -146,22 +148,22 @@
                 <p>The experts behind the platform.</p>
             </div>
             <div class="grid-3 stagger-grid">
-                <div class="card text-center hover-lift">
-                    <div style="width:100px; height:100px; background:var(--primary-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user"></i></div>
-                    <h3>Robert Farm</h3>
-                    <p>CEO & Founder</p>
-                </div>
-                <div class="card text-center hover-lift">
-                    <div style="width:100px; height:100px; background:var(--accent-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user-tie"></i></div>
-                    <h3>Jane Doe</h3>
-                    <p>Head of Agronomy</p>
-                </div>
-                <div class="card text-center hover-lift">
-                    <div style="width:100px; height:100px; background:var(--primary-color); border-radius:50%; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:white; font-size:2.5rem;"><i class="fas fa-user-cog"></i></div>
-                    <h3>Alan Tech</h3>
-                    <p>Chief Technology Officer</p>
-                </div>
-            </div>
+    <div class="card text-center hover-lift" style="padding: 2rem; border-top: 5px solid var(--primary-color);">
+        <img src="assets/images/a1.webp" alt="Robert Farm" class="pulse-anim" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border: 4px solid white; box-shadow: var(--shadow-md);">
+        <h3 style="margin-bottom:0.2rem;">Robert Farm</h3>
+        <p style="color:var(--text-light); font-weight:500;">CEO & Founder</p>
+    </div>
+    <div class="card text-center hover-lift" style="padding: 2rem; border-top: 5px solid var(--accent-color);">
+        <img src="assets/images/a2.webp" alt="Jane Doe" class="pulse-anim" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border: 4px solid white; box-shadow: var(--shadow-md); animation-delay: 0.2s;">
+        <h3 style="margin-bottom:0.2rem;">Jane Doe</h3>
+        <p style="color:var(--text-light); font-weight:500;">Head of Agronomy</p>
+    </div>
+    <div class="card text-center hover-lift" style="padding: 2rem; border-top: 5px solid var(--primary-color);">
+        <img src="assets/images/a3.webp" alt="Alan Tech" class="pulse-anim" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto 1rem; border: 4px solid white; box-shadow: var(--shadow-md); animation-delay: 0.4s;">
+        <h3 style="margin-bottom:0.2rem;">Alan Tech</h3>
+        <p style="color:var(--text-light); font-weight:500;">Chief Technology Officer</p>
+    </div>
+</div>
         </div>
     </section>
 
@@ -222,7 +224,9 @@
                         <li><a href="Crops.html">Crops</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                    </ul>
+                        <li class="mobile-only"><a href="Login.html" class="btn btn-outline" style="display:inline-block; width:100%; margin-bottom:1rem;">Login</a></li>
+            <li class="mobile-only"><a href="Signup.html" class="btn btn-primary" style="display:inline-block; width:100%;">Get Started</a></li>
+        </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -230,7 +234,9 @@
                         <li><a href="Contact.html">Contact Us</a></li>
                         <li><a href="404.html">Privacy Policy</a></li>
                         <li><a href="404.html">Terms & Conditions</a></li>
-                    </ul>
+                        <li class="mobile-only"><a href="Login.html" class="btn btn-outline" style="display:inline-block; width:100%; margin-bottom:1rem;">Login</a></li>
+            <li class="mobile-only"><a href="Signup.html" class="btn btn-primary" style="display:inline-block; width:100%;">Get Started</a></li>
+        </ul>
                 </div>
                 <div class="footer-col contact-col">
                     <h4>Contact</h4>
@@ -238,7 +244,9 @@
                         <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
                         <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
                         <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
-                    </ul>
+                        <li class="mobile-only"><a href="Login.html" class="btn btn-outline" style="display:inline-block; width:100%; margin-bottom:1rem;">Login</a></li>
+            <li class="mobile-only"><a href="Signup.html" class="btn btn-primary" style="display:inline-block; width:100%;">Get Started</a></li>
+        </ul>
                 </div>
                 <div class="footer-col newsletter-col">
                     <h4>Newsletter</h4>
