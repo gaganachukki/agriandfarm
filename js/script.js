@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
             navActions.forEach(btn => btn.classList.toggle('active-mobile'));
             
+            // Prevent background scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            
             // Toggle hamburger to closing tag (X)
             if (navLinks.classList.contains('active')) {
                 mobileMenuBtn.classList.remove('fa-bars');
@@ -37,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.classList.remove('fa-times');
                 mobileMenuBtn.classList.add('fa-bars');
+                document.body.style.overflow = '';
             });
         });
     }
