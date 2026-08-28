@@ -20,14 +20,12 @@
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
-}
 
-/* 768px (Tablet) */
-@media (max-width: 768px) {
+    /* Navbar Mobile Menu Triggered at Tablet Size */
     .navbar { padding: 1rem 5%; }
     
     .nav-links, .nav-actions .btn {
-        display: none; /* Hide default nav for mobile */
+        display: none; /* Hide default nav for mobile/tablet */
     }
     
     .nav-actions .mobile-menu-btn {
@@ -47,6 +45,7 @@
         box-shadow: var(--shadow-md);
         text-align: center;
         gap: 1.5rem;
+        z-index: 1000;
     }
     
     .nav-actions {
@@ -56,7 +55,10 @@
         display: inline-block;
         margin-top: 1rem;
     }
+}
 
+/* 768px (Tablet) */
+@media (max-width: 768px) {
     .grid-2, .grid-3, .grid-4 {
         grid-template-columns: 1fr;
     }
