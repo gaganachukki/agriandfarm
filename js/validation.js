@@ -127,6 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact form validation
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        const contactNameInput = document.getElementById('contact-name');
+        if (contactNameInput) {
+            contactNameInput.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+            });
+        }
+
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
@@ -135,6 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
             inputs.forEach(input => {
                 if(!input.value.trim()) {
                     showError(input, 'This field is required');
+                    isValid = false;
+                } else if (input.id === 'contact-name' && input.value.trim().length < 3) {
+                    showError(input, 'Name must be at least 3 characters');
+                    isValid = false;
+                } else if (input.id === 'contact-email' && !isValidEmail(input.value)) {
+                    showError(input, 'Please enter a valid email');
+                    isValid = false;
+                } else if (input.id === 'contact-message' && input.value.trim().length < 10) {
+                    showError(input, 'Message must be at least 10 characters');
                     isValid = false;
                 } else {
                     showSuccess(input);

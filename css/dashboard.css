@@ -40,7 +40,7 @@ body {
     justify-content: center;
 }
 .sidebar-brand img {
-    max-height: 35px;
+    max-height: 45px;
 }
 
 .sidebar-user-card {
@@ -63,8 +63,9 @@ body {
     justify-content: center;
     font-size: 1.2rem;
 }
-.sidebar-user-info h4 { margin: 0; font-size: 0.9rem; color: var(--text-dark); font-weight: 600; }
-.sidebar-user-info p { margin: 0; font-size: 0.75rem; color: var(--text-light); }
+.sidebar-user-info { min-width: 0; }
+.sidebar-user-info h4 { margin: 0; font-size: 0.9rem; color: var(--text-dark); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sidebar-user-info p { margin: 0; font-size: 0.75rem; color: var(--text-light); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sidebar-user-info .badge { font-size: 0.65rem; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 0.2rem 0.5rem; border-radius: 12px; margin-top: 0.4rem; display: inline-block; font-weight: 600;}
 
 .sidebar-menu {
@@ -284,13 +285,25 @@ body {
     .user-profile {
         gap: 0.5rem !important;
     }
-    .mobile-logo img { max-height: 25px; }
+    .mobile-logo img { max-height: 35px; }
+
+    /* Fix welcome banner and stats on very small screens (320px, 375px, 425px) */
+    .welcome-banner h1 {
+        font-size: 2rem !important;
+    }
+    .welcome-stats-card {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+    }
+    .welcome-stat-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
     
     /* Fix squished content on mobile */
-    .main-content > div {
-        margin: 0 1rem 1rem !important;
-        padding: 1.5rem !important;
-    }
+    
     .welcome-banner {
         padding: 2rem 1rem !important;
     }
@@ -302,7 +315,7 @@ body {
     }
 }
 
-/* Old media query disabled
+/* Old media query disabled */
 @media (max-width: 768px) {
     .sidebar { transform: translateX(-100%); }
     .sidebar.open { transform: translateX(0); }
@@ -357,4 +370,103 @@ body {
 }
 canvas {
     max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+    /* --- ADMIN PAGES MOBILE FIXES --- */
+    
+    /* Fix welcome banner font size */
+    .welcome-banner h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Fix welcome stats card */
+    .welcome-stats-card {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        width: 100% !important;
+    }
+    .welcome-stat-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    /* Fix fixed-width inputs causing horizontal overflow (e.g. Manage Farmers) */
+    input[type="text"], input[type="email"], input[type="password"], select {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    /* Target specific inline flexboxes in Admin pages that cause horizontal scrolling */
+    .main-content > div:not(.topbar) > div[style*="display:flex"],
+    .main-content > div:not(.topbar) > div[style*="display:flex"] > div[style*="display:flex"],
+    .card div[style*="display:flex"],
+    .panel div[style*="display:flex"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        height: auto !important; /* override height:250px in Analytics */
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    /* Fix buttons in these wrappers */
+    .main-content > div:not(.topbar) div[style*="display:flex"] .btn {
+        width: 100% !important;
+        margin: 0 0 0.5rem 0 !important;
+    }
+    
+    /* Analytics Pie Chart Wrapper Fix */
+    .card div[style*="display:flex"] > div:first-child {
+        margin: 0 auto !important;
+    }
+
+
+    /* Catch-all for form inline flexboxes on Farmer/Admin Settings */
+    .main-content form div[style*="display:flex"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 1rem !important;
+    }
+
+
+    /* Stretch cards to edge on mobile to remove unwanted white gaps */
+    .welcome-banner {
+        margin: 0 0.5rem 1rem 0.5rem !important;
+        border-radius: 8px !important;
+    }
+    
+    .dashboard-grid {
+        margin: 0 0.5rem !important;
+    }
+    
+    .panel {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    /* Make tables and other containers stretch too */
+    .main-content > div[style*="padding: 3rem; margin: 0 2rem 2rem;"] {
+        margin: 0 0.5rem 1rem 0.5rem !important;
+        padding: 1rem !important;
+    }
+
+
+    /* Fix pagination buttons being stretched and stacked by catch-all */
+    .pagination-wrapper {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .pagination-wrapper .btn {
+        width: auto !important;
+        flex: 1 1 auto;
+        margin: 0 !important;
+        padding: 0.5rem !important;
+    }
+
 }

@@ -66,15 +66,16 @@
                 <p style="color: var(--text-light); font-size:1.1rem; margin: 0;">Trigger massive regional alarms for extreme meteorological events.</p>
                 <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;">
                 
-        <div style="background:#fee2e2; border:2px solid #ef4444; padding:3rem; border-radius:12px; text-align:center; margin-bottom:3rem;">
+        <div style="background:#fee2e2; border:2px solid #ef4444; padding:1.5rem; border-radius:12px; text-align:center; margin-bottom:3rem;">
             <i class="fas fa-exclamation-triangle fa-5x" style="color:#ef4444; margin-bottom:1.5rem; animation: pulse 2s infinite;"></i>
-            <h1 style="color:#991b1b; margin-bottom:1rem; font-size:2.5rem;">INITIATE OVERRIDE ALARM</h1>
+            <h1 style="color:#991b1b; margin-bottom:1rem; font-size:2rem;">INITIATE OVERRIDE ALARM</h1>
             <p style="color:#b91c1c; margin:0 auto 2rem; max-width:600px; font-size:1.1rem;">Use this panel only for severe life-threatening or catastrophic crop loss events (Cyclones, Flash Floods, Severe Droughts). These alerts will bypass all user 'Do Not Disturb' preferences and trigger loud SMS sirens instantly.</p>
-            <button onclick="window.location.href='404.html'" class="btn" style="background:#ef4444; color:white; padding:1.2rem 3rem; font-size:1.2rem; font-weight:bold; box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);"><i class="fas fa-satellite-dish"></i> CONFIGURE EMERGENCY PAYLOAD</button>
+            <button onclick="window.location.href='404.html'" class="btn" style="background:#ef4444; color:white; padding:1rem 1.5rem; font-size:1rem; white-space:normal; width:100%; max-width:100%; word-wrap:break-word; font-weight:bold; box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);"><i class="fas fa-satellite-dish"></i> CONFIGURE EMERGENCY PAYLOAD</button>
         </div>
         
         <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Automated Threshold Triggers</h3>
-        <table style="width:100%; border-collapse:collapse; text-align:left; margin-bottom:3rem;">
+        <div class="table-responsive">
+<table style="width:100%; border-collapse:collapse; text-align:left; margin-bottom:3rem;">
             <thead>
                 <tr style="background:var(--bg-light); border-bottom:2px solid #e2e8f0;">
                     <th style="padding:1rem;">Event Type</th><th style="padding:1rem;">Sensor / API Trigger</th><th style="padding:1rem;">Action Taken</th><th style="padding:1rem;">Status</th>
@@ -86,12 +87,51 @@
                 <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:1rem; font-weight:600;">Frost</td><td style="padding:1rem;">Temperature < 4°C</td><td style="padding:1rem;">Standard Alert (Hilly Regions)</td><td style="padding:1rem;"><span style="color:#94a3b8; font-weight:bold;">Disabled</span> <i class="fas fa-toggle-off fa-lg" style="color:#cbd5e1; float:right; margin-top:2px;"></i></td></tr>
             </tbody>
         </table>
+</div>
         
         <h3 style="margin-bottom:1.5rem; color:var(--text-dark); border-bottom:2px solid #e2e8f0; padding-bottom:0.5rem;">Active Weather Anomalies (Live Radar)</h3>
-        <div style="height:400px; background:#0f172a; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#38bdf8; flex-direction:column;">
-            <i class="fas fa-satellite fa-4x" style="margin-bottom:1rem; opacity:0.8;"></i>
-            <h3>Live Meteorological Map Rendered Here</h3>
-            <p style="opacity:0.6;">(Connects to IMD Satellite API)</p>
+        <div style="position:relative; height:400px; background:#0f172a; border-radius:12px; overflow:hidden; border:1px solid #1e293b;">
+            <!-- Grid background -->
+            <div style="position:absolute; inset:0; background-image: radial-gradient(#1e293b 1px, transparent 1px), radial-gradient(#1e293b 1px, transparent 1px); background-size: 40px 40px; background-position: 0 0, 20px 20px; opacity:0.3;"></div>
+            
+            <!-- Concentric circles -->
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; height:300px; border-radius:50%; border:1px solid rgba(56,189,248,0.2);"></div>
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:200px; height:200px; border-radius:50%; border:1px solid rgba(56,189,248,0.3);"></div>
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100px; height:100px; border-radius:50%; border:1px solid rgba(56,189,248,0.5);"></div>
+            
+            <!-- Crosshairs -->
+            <div style="position:absolute; top:0; bottom:0; left:50%; width:1px; background:rgba(56,189,248,0.2);"></div>
+            <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(56,189,248,0.2);"></div>
+            
+            <!-- Radar sweep (using conic-gradient) -->
+            <div style="position:absolute; top:50%; left:50%; width:300px; height:300px; margin-top:-150px; margin-left:-150px; border-radius:50%; background:conic-gradient(from 0deg, transparent 70%, rgba(56,189,248,0.1) 80%, rgba(56,189,248,0.8) 100%); animation: radar-spin 4s linear infinite;"></div>
+            
+            <!-- Warning Blips -->
+            <div style="position:absolute; top:30%; left:60%; width:12px; height:12px; background:#ef4444; border-radius:50%; box-shadow: 0 0 10px #ef4444; animation: blink 2s infinite;"></div>
+            <div style="position:absolute; top:65%; left:35%; width:15px; height:15px; background:#f59e0b; border-radius:50%; box-shadow: 0 0 10px #f59e0b; animation: blink 2.5s infinite 0.5s;"></div>
+            
+            <!-- Center node -->
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:8px; height:8px; background:#38bdf8; border-radius:50%; box-shadow:0 0 10px #38bdf8;"></div>
+            
+            <!-- Info panel overlay -->
+            <div style="position:absolute; bottom:1rem; left:1rem; background:rgba(15,23,42,0.8); border:1px solid rgba(56,189,248,0.3); padding:1rem; border-radius:8px; backdrop-filter:blur(4px);">
+                <h4 style="color:#38bdf8; margin:0 0 0.5rem 0; font-size:0.9rem;"><i class="fas fa-satellite"></i> IMD LIVE RADAR</h4>
+                <div style="display:flex; gap:1rem; font-size:0.8rem; color:#cbd5e1; flex-wrap:wrap;">
+                    <div style="display:flex; align-items:center;"><span style="display:inline-block; width:8px; height:8px; background:#ef4444; border-radius:50%; margin-right:6px;"></span> Severe Storm Cell (45km)</div>
+                    <div style="display:flex; align-items:center;"><span style="display:inline-block; width:8px; height:8px; background:#f59e0b; border-radius:50%; margin-right:6px;"></span> Heavy Rain (12km)</div>
+                </div>
+            </div>
+            
+            <style>
+                @keyframes radar-spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                @keyframes blink {
+                    0%, 100% { opacity: 1; transform: scale(1); }
+                    50% { opacity: 0.3; transform: scale(0.8); }
+                }
+            </style>
         </div>
         
             </div>

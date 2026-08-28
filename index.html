@@ -125,8 +125,29 @@
             .growth-timeline::before {
                 top: 0; left: 40px; width: 4px; height: 100%;
             }
-            .timeline-item { width: 100%; display: flex; align-items: center; gap: 2rem; text-align: left; }
-            .timeline-item .icon-box { margin: 0; }
+            .timeline-item { 
+                width: 100%; 
+                display: grid; 
+                grid-template-columns: 80px 1fr; 
+                column-gap: 1.5rem;
+                row-gap: 0.3rem;
+                align-items: center; 
+                text-align: left; 
+            }
+            .timeline-item .icon-box { 
+                grid-row: span 2; 
+                margin: 0; 
+            }
+            .timeline-item h4 { 
+                align-self: end; 
+                margin: 0; 
+                font-size: 1.2rem;
+            }
+            .timeline-item p { 
+                align-self: start; 
+                margin: 0; 
+                color: var(--text-light);
+            }
         }
     </style>
 </head>
@@ -402,7 +423,8 @@
                 <p>Stay updated with the latest commodity trends.</p>
             </div>
             <div class="card" style="overflow-x:auto;">
-                <table style="width:100%; text-align:left; border-collapse:collapse;">
+                <div class="table-responsive">
+<table style="width:100%; text-align:left; border-collapse:collapse;">
                     <tr style="border-bottom:2px solid var(--primary-color);">
                         <th style="padding:1rem;">Commodity</th>
                         <th style="padding:1rem;">Price (USD)</th>
@@ -424,6 +446,7 @@
                         <td style="padding:1rem; color:green;"><i class="fas fa-arrow-up"></i> 2.1%</td>
                     </tr>
                 </table>
+</div>
             </div>
         </div>
     </section>
@@ -445,7 +468,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col brand-col">
-                    <img src="assets/images/logo.webp" alt="Logo" class="footer-logo">
+                    <a href="index.html"><img src="assets/images/logo.webp" alt="Logo" class="footer-logo"></a>
                     <p>A premium partner for farm management and agricultural solutions worldwide.</p>
                     <div class="social-links">
                         <a href="404.html"><i class="fab fa-facebook-f"></i></a>
@@ -477,7 +500,7 @@
                     <ul>
                         <li><i class="fas fa-envelope"></i> support@agriculturefarm.com</li>
                         <li><i class="fas fa-phone-alt"></i> +1 98765 43210</li>
-                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Salem, Tamil Nadu</li>
                     </ul>
                 </div>
                 <div class="footer-col newsletter-col">

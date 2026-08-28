@@ -468,3 +468,16 @@ p { color: var(--text-light); font-size: 1.05rem; }
     .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
     .hero-buttons .btn { width: 100%; text-align: center; margin: 0 !important; }
 }
+
+
+@media (max-width: 992px) {
+    .grid-4, .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-4, .grid-3, .grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+}
